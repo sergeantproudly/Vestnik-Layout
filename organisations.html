@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Вестник"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+
+	<title>Вестник</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/images/icons/android-chrome-256x256.png">
+	<link rel="manifest" href="/assets/images/site.webmanifest">
+	<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#EA525B">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="msapplication-TileColor" content="#EA525B">
+	<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+	<meta name="theme-color" content="#EA525B">
+
+	<meta property="og:image" content="/assets/images/og_preview.png">
+    <meta property="og:title" content="Вестник">
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Вестник" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Вестник" />
+    <meta name="twitter:title" content="Вестник" />
+    <meta name="twitter:image" content="/assets/images/og_preview.png" />
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+
+<body>
+	<div id="layout">
+		<header>
+			<div class="holder">
+				<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
+				<div id="location">Казань</div>
+				<a href="#" id="log-in">Войти</a>
+				<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
+				<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
+				<div id="ico-burger"></div>
+			</div>
+		</header>
+
+		<main class="body">
+			<nav id="mn-main" class="tabs">
+				<ul class="holder">
+					<li><a href="/">Мероприятия</a></li>
+					<li><a href="organisations.html" class="curr">Организации</a></li>
+				</ul>
+			</nav>
+
+			<section id="organisations">
+				<div class="holder">
+					<h1>Организации <sup>2230</sup></h1>
+
+					<div class="filter">
+						<div class="search">
+							<form action="search.html" method="post">
+								<input type="text" name="keyword" placeholder="Поиск по организациям">
+								<input type="image" src="assets/images/ico_search.svg" class="ico">
+								<div class="clear"></div>
+							</form>
+						</div>
+						<div class="tags">
+							<ul>
+								<li class="select">
+									<div class="label">Тип мероприятия</div>
+									<div class="dd">
+										<div class="item"><input type="checkbox" name="t1" id="tags-t1"><label for="tags-t1">Мастеркласс</label></div>
+										<div class="item"><input type="checkbox" name="t2" id="tags-t2"><label for="tags-t2">Семинар</label></div>
+										<div class="item"><input type="checkbox" name="t3" id="tags-t3"><label for="tags-t3">Праздник</label></div>
+										<div class="item"><input type="checkbox" name="t4" id="tags-t4"><label for="tags-t4">Вариант 4</label></div>
+										<div class="item"><input type="checkbox" name="t5" id="tags-t5"><label for="tags-t5">Вариант 5</label></div>
+										<div class="item"><input type="checkbox" name="t6" id="tags-t6"><label for="tags-t6">Вариант 6</label></div>
+										<div class="item"><input type="checkbox" name="t7" id="tags-t7"><label for="tags-t7">Вариант 7</label></div>
+										<div class="item"><input type="checkbox" name="t8" id="tags-t8"><label for="tags-t8">Вариант 8</label></div>
+									</div>
+								</li>
+								<li>духовные мероприятия</li>
+								<li>новые</li>
+								<li>образовательные мероприятия</li>
+								<li>праздники</li>
+								<li>для детей</li>
+								<li class="hidden">для взрослых</li>
+								<li class="hidden">духовные мероприятия</li>
+								<li class="hidden">образовательные мероприятия</li>
+								<li class="hidden">праздники</li>
+								<li class="hidden">новые</li>
+								<li class="hidden">для детей</li>
+								<li class="more">Еще</li>
+							</ul>
+						</div>
+						<div class="flex">
+							<div class="types">
+								<ul>
+									<li><a href="#" class="curr">Все</a></li>
+									<li><a href="#">Избранные</a></li>
+									<li><a href="#">Мои</a></li>
+								</ul>
+							</div>
+							<div class="view-types">
+								<ul>
+									<li>
+										<a href="organisations.html" class="list curr">Списком</a>
+									</li>
+									<li>
+										<a href="organisations-map.html" class="map">На карте</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="orglist">
+						<ul>
+							<li>
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org1.jpg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Школа Народного Танца</a>
+								<span class="type">Профсоюз</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li>
+								<a href="organisation.html" class="photo no-photo">
+									<img src="assets/images/no_photo.svg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Звенящие кедры России</a>
+								<span class="type">Община</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li class="blocked">
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org2.jpg" alt="#" title="#">
+									<span class="status">Организация заблокирована</span>
+								</a>
+								<a href="organisation.html" class="title">Кулинарный клуб</a>
+								<span class="type">Клуб по интересам</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li>
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org3.jpg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Шахматный Клуб Казани</a>
+								<span class="type">Профсоюз</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li>
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org4.jpg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Шахматный Клуб Казани</a>
+								<span class="type">Профсоюз</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li>
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org5.jpg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Шахматный Клуб Казани</a>
+								<span class="type">Профсоюз</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li>
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org6.jpg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Шахматный Клуб Казани</a>
+								<span class="type">Профсоюз</span>
+								<span class="distance">500 м</span>
+							</li>
+
+							<li>
+								<a href="organisation.html" class="photo">
+									<img src="assets/images/_org1.jpg" alt="#" title="#">
+									<span class="favourite"></span>
+								</a>
+								<a href="organisation.html" class="title">Шахматный Клуб Казани</a>
+								<span class="type">Профсоюз</span>
+								<span class="distance">500 м</span>
+							</li>
+						</ul>
+
+						<div class="btn-line">
+							<button class="btn">Показать еще 19</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="holder">
+				<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
+				<div id="bottom-info">
+					<div id="copyright">&copy;2022 ООО «Вестник»</div>
+					<a href="#" id="terms-link">Пользовательское соглашение</a>
+				</div>
+				<a href="#" id="about-link">О проекте</a>
+				<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
+			</div>
+		</footer>
+
+		<div id="burger-menu">
+			<div class="mn-main">
+				<ul>
+					<li><a href="#">О проекте</a></li>
+				</ul>
+			</div>
+			<div class="close"></div>
+		</div>
+	</div>
+
+	<div id="modal-fadeout"></div>
+
+	<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

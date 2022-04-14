@@ -1,0 +1,29 @@
+$font-sizes: (
+	desktop: 18,
+	tablet: 16,
+	mobile: 12
+);
+$dimensions: (
+	desktop: 1440,
+	tablet: 768,
+	mobile: 320	
+);
+
+@mixin font-size($sizeValue) {
+	font-size: $sizeValue + px;
+}
+@mixin fs($sizeValue) {
+	@include font-size($sizeValue);
+}
+@function vw($value, $dimension: desktop) {
+	@return $value + px;
+}
+@function vwd($value) {
+	@return $value + px;
+}
+@function vwt($value) {
+	@return $value + px;
+}
+@function vwm($value) {
+	@return $value + px;
+}

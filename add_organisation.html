@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Вестник"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+
+	<title>Вестник</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/images/icons/android-chrome-256x256.png">
+	<link rel="manifest" href="/assets/images/site.webmanifest">
+	<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#EA525B">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="msapplication-TileColor" content="#EA525B">
+	<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+	<meta name="theme-color" content="#EA525B">
+
+	<meta property="og:image" content="/assets/images/og_preview.png">
+    <meta property="og:title" content="Вестник">
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Вестник" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Вестник" />
+    <meta name="twitter:title" content="Вестник" />
+    <meta name="twitter:image" content="/assets/images/og_preview.png" />
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+
+<body>
+	<div id="layout">
+		<header>
+			<div class="holder">
+				<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
+				<div id="location">Казань</div>
+				<!--<a href="#" id="log-in">Войти</a>-->
+				<a href="#" id="logged-in"><span>Михаил Шаверов</span></a>
+				<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
+				<div id="ico-burger"></div>
+			</div>
+		</header>
+
+		<main class="body">
+			<nav id="mn-main" class="tabs">
+				<ul class="holder">
+					<li><a href="/">Мероприятия</a></li>
+					<li><a href="organisations.html" class="curr">Организации</a></li>
+				</ul>
+			</nav>
+
+			<div id="bread-crumbs">
+				<ul class="holder">
+					<li><a href="/">Главная</a></li>
+					<li><a href="#">Личный кабинет</a></li>
+				</ul>
+			</div>
+
+			<div id="add-form" class="organisation">
+				<div class="holder">
+					<h1>Добавить организацию</h1>
+
+					<div class="tabs js-tabs">
+						<ul>
+							<li><a href="#info" class="tab-act">Информация</a></li>
+							<li><a href="#services" id="link-services">Товары</a></li>
+						</ul>
+					</div>
+
+					<form action="#" method="post">
+						<div id="info" class="tab-content">
+							<h2>Основная информация</h2>
+
+							<div class="half">
+								<div class="section">
+									<h3>Тип</h3>
+
+									<div class="select">
+										<div class="label">Выберите</div>
+										<div class="dd">
+											<div class="item"><input type="checkbox" name="t1" id="type-t1"><label for="type-t1">Мастеркласс</label></div>
+											<div class="item"><input type="checkbox" name="t2" id="type-t2"><label for="type-t2">Семинар</label></div>
+											<div class="item"><input type="checkbox" name="t3" id="type-t3"><label for="type-t3">Праздник</label></div>
+											<div class="item"><input type="checkbox" name="t4" id="type-t4"><label for="type-t4">Вариант 4</label></div>
+											<div class="item"><input type="checkbox" name="t5" id="type-t5"><label for="type-t5">Вариант 5</label></div>
+											<div class="item"><input type="checkbox" name="t6" id="type-t6"><label for="type-t6">Вариант 6</label></div>
+											<div class="item"><input type="checkbox" name="t7" id="type-t7"><label for="type-t7">Вариант 7</label></div>
+											<div class="item"><input type="checkbox" name="t8" id="type-t8"><label for="type-t8">Вариант 8</label></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="section">
+									<h3>Название</h3>
+
+									<input type="text" name="name" maxlength="255" placeholder="Написать">
+								</div>
+							</div>
+
+							<div class="section">
+								<h3>Описание</h3>
+
+								<textarea name="text" placeholder="Написать"></textarea>
+							</div>
+
+							<div class="half">
+								<div class="section">
+									<h3>Дата основания</h3>
+
+									<input type="text" name="date" maxlength="255" placeholder="Выберите" class="date">
+								</div>
+							</div>
+
+							<div class="section">
+								<h3>Тэги</h3>
+
+								<input type="text" name="tags" maxlength="255" placeholder="Найти">
+							</div>
+
+							<div class="section logotype">
+								<h2>Логотип</h2>
+
+								<div class="flex">
+									<!--<div class="image-holder"><span>Добавить лого</span></div>-->
+									<div class="image-holder">
+										<img src="assets/images/_event_photo.jpg" alt="" class="photo">
+										<span class="remove"></span>
+									</div>
+									<div class="info">
+										<h4>Логотип</h4>
+										<div class="upload">
+											<a href="#" class="js-upload-file">Загрузить</a>
+											<input type="file" name="photo" id="upload-logo-input" multiple accept="image/*">
+										</div>
+										<div class="hint">PNG на прозрачном фоне, размер 160x90px</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="section photos">
+								<h2>Фотографии</h2>
+
+								<div class="note">
+									<p>Первая фотография из загруженных используется в качестве превью в списке мероприятий и фонового изображения на странице мероприятия</p>
+								</div>
+
+								<div class="flex">
+									<div class="image-holder uploaded">
+										<img src="assets/images/_photo8.jpg" alt="" class="photo">
+										<span class="remove"></span>
+									</div>
+									<div class="image-holder">
+										<span>Добавить фото</span>
+										<input type="file" name="photo[]" id="upload-photo-input2" multiple accept="image/*">
+									</div>
+									<div class="image-holder">
+										<span>Добавить фото</span>
+										<input type="file" name="photo[]" id="upload-photo-input3" multiple accept="image/*">
+									</div>
+									<div class="image-holder">
+										<span>Добавить фото</span>
+										<input type="file" name="photo[]" id="upload-photo-input4" multiple accept="image/*">
+									</div>
+									<div class="image-holder">
+										<span>Добавить фото</span>
+										<input type="file" name="photo[]" id="upload-photo-input5" multiple accept="image/*">
+									</div>
+								</div>
+							</div>
+
+							<div class="section contacts">
+								<h2>Контакты</h2>
+
+								<h4>сайт</h4>
+								<div class="input input-clearing">
+									<input type="text" name="site" maxlength="255" placeholder="Указать">
+									<span class="tool"></span>
+								</div>
+
+								<h4>email</h4>
+								<div class="input input-clearing">
+									<input type="email" name="email" maxlength="255" placeholder="Указать">
+									<span class="tool"></span>
+								</div>
+
+								<div class="add-contact" id="add-contact">
+									<span>Добавить контакт</span>
+								</div>
+							</div>
+
+							<div class="section address">
+								<h2>Геолокация</h2>
+
+								<div class="add-address js-modal-link" id="add-address" data-target="#modal-address">
+									<span>Добавить карту</span>
+								</div>
+
+								<!-- modal address -->
+								<div class="modal-wrapper modal-address" data-long="true" id="modal-address">
+									<div class="modal">
+										<div class="contents">
+											<div class="modal-close" title="Закрыть"></div>
+
+											<div class="h1">Добавить местоположение</div>
+											<div class="search">
+												<input type="text" name="keyword" placeholder="Поиск по городам" autocomplete="off">
+												<input type="image" src="assets/images/ico_search.svg" class="ico">
+											</div>
+
+											<div class="flex">
+												<address>Казань, ул. Дольская, д. 1</address>
+												<span class="remove">Удалить точку</span>
+											</div>
+
+											<div id="map-modal"></div>
+
+											<button class="btn">Сохранить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="services" class="tab-content">
+							<div id="service" class="service">
+								<div class="half">
+									<div class="section">
+										<h3>Тип</h3>
+
+										<div class="select">
+											<div class="label">Выберите</div>
+											<div class="dd">
+												<div class="item"><input type="radio" name="service-type" id="type-g1"><label for="type-g1">Товар</label></div>
+												<div class="item"><input type="radio" name="service-type" id="type-g2"><label for="type-g2">Услуга</label></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="section">
+										<h3>Стоимость ₽</h3>
+
+										<input type="text" name="price" maxlength="255" placeholder="Указать">
+									</div>
+								</div>
+
+								<div class="section">
+									<h3>Название</h3>
+
+									<input type="text" name="name" maxlength="255" placeholder="Указать">
+								</div>
+
+								<div class="section">
+									<h3>Внешняя ссылка на сайт</h3>
+
+									<input type="text" name="website" maxlength="255" placeholder="Указать">
+								</div>
+
+								<div class="section logotype">
+									<h2>Фотография</h2>
+
+									<div class="flex">
+										<!--<div class="image-holder"><span>Добавить лого</span></div>-->
+										<div class="image-holder">
+											<img src="assets/images/_event_photo.jpg" alt="" class="photo">
+											<span class="remove"></span>
+										</div>
+										<div class="info">
+											<!--
+											<h4>Логотип</h4>
+											<div class="upload">
+												<a href="#" class="js-upload-file">Загрузить</a>
+												<input type="file" name="photo" id="upload-logo-input" multiple accept="image/*">
+											</div>
+											<div class="hint">PNG на прозрачном фоне, размер 160x90px</div>
+											-->
+											<div class="remove">Удалить фото</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="add-service" id="add-service">
+								<span>Добавить товар</span>
+							</div>
+						</div>
+
+						<div class="btn-line"><button class="btn js-modal-link" data-target="#modal-publishing-confirm">Опубликовать организацию</button></div>
+						<div class="reset-line"><span class="js-reset-form">Очистить все поля</span></div>
+
+						<!-- modal publishing-confirm -->
+						<div class="modal-wrapper modal-publishing-confirm" data-long="true" id="modal-publishing-confirm">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Вы действительно хотите опубликовать мероприятие без добавления тарифа?</div>
+									<div class="btn-line">
+										<button class="btn type2">Да, все верно</button>
+										<button class="btn js-btn-add-tariffs">Добавить тарифы</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="holder">
+				<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
+				<div id="bottom-info">
+					<div id="copyright">&copy;2022 ООО «Вестник»</div>
+					<a href="#" id="terms-link">Пользовательское соглашение</a>
+				</div>
+				<a href="#" id="about-link">О проекте</a>
+				<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
+			</div>
+		</footer>
+
+		<div id="burger-menu">
+			<div class="mn-main">
+				<ul>
+					<li><a href="#">О проекте</a></li>
+				</ul>
+			</div>
+			<div class="close"></div>
+		</div>
+	</div>
+
+	<div id="modal-fadeout"></div>
+
+	<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

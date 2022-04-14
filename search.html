@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Вестник"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+
+	<title>Вестник</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/images/icons/android-chrome-256x256.png">
+	<link rel="manifest" href="/assets/images/site.webmanifest">
+	<link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#EA525B">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="msapplication-TileColor" content="#EA525B">
+	<meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+	<meta name="theme-color" content="#EA525B">
+
+	<meta property="og:image" content="/assets/images/og_preview.png">
+    <meta property="og:title" content="Вестник">
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Вестник" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Вестник" />
+    <meta name="twitter:title" content="Вестник" />
+    <meta name="twitter:image" content="/assets/images/og_preview.png" />
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+
+<body>
+	<div id="layout">
+		<header>
+			<div class="holder">
+				<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
+				<div id="location">Казань</div>
+				<a href="#" id="log-in">Войти</a>
+				<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
+				<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
+				<div id="ico-burger"></div>
+			</div>
+		</header>
+
+		<main class="body">
+			<nav id="mn-main" class="tabs">
+				<ul class="holder">
+					<li><a href="/" class="curr">Мероприятия</a></li>
+					<li><a href="organisations.html">Организации</a></li>
+				</ul>
+			</nav>
+
+			<section id="catalogue">
+				<div class="holder">
+					<form action="search.html" method="post">
+						<div class="search search-wide">						
+							<div class="input-holder">
+								<input type="text" name="keyword" placeholder="Поиск по мероприятиям" value="Масленица">
+								<input type="image" src="assets/images/ico_search.svg" class="ico">
+								<div class="clear"></div>
+							</div>
+							<button class="btn"><span>Найти</span></button>						
+						</div>
+					</form>
+
+					<h1>Найдено 3</h1>
+
+					<div class="activities">
+						<ul>
+							<li>
+								<a href="#" class="photo">
+									<img src="assets/images/_photo1.jpg" alt="#" title="#">
+									<span class="price">от 1200 ₽</span>
+									<span class="favourite"></span>
+								</a>
+								<a href="#" class="title">Масленица в Парке Горького</a>
+								<span class="date">18 фераля, 10:00, онлайн</span>
+								<span class="distance">500 м</span>
+							</li>
+							<li>
+								<a href="#" class="photo">
+									<img src="assets/images/_photo2.jpg" alt="#" title="#">
+									<span class="price">от 1200 ₽</span>
+									<span class="favourite"></span>
+								</a>
+								<a href="#" class="title">Творческое решение проблем</a>
+								<span class="date">18 фераля, 10:00, онлайн</span>
+								<span class="distance">500 м</span>
+							</li>
+							<li>
+								<a href="#" class="photo">
+									<img src="assets/images/_photo3.jpg" alt="#" title="#">
+									<span class="price">от 1200 ₽</span>
+									<span class="favourite act"></span>
+								</a>
+								<a href="#" class="title">Готовим домашние манты</a>
+								<span class="date">18 фераля, 10:00, онлайн</span>
+								<span class="distance">500 м</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="holder">
+				<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
+				<div id="bottom-info">
+					<div id="copyright">&copy;2022 ООО «Вестник»</div>
+					<a href="#" id="terms-link">Пользовательское соглашение</a>
+				</div>
+				<a href="#" id="about-link">О проекте</a>
+				<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
+			</div>
+		</footer>
+
+		<div id="burger-menu">
+			<div class="mn-main">
+				<ul>
+					<li><a href="#">О проекте</a></li>
+				</ul>
+			</div>
+			<div class="close"></div>
+		</div>
+	</div>
+
+	<div id="modal-fadeout"></div>
+
+	<script src="/assets/js/scripts.js"></script>
+</body>
+</html>
