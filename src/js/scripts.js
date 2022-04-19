@@ -374,7 +374,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		function addFormTag(text) {
 			if (!$('#add-form .tags>ul').length) $('#add-form .tags').append('<ul></ul>');
 			var $ul = $('#add-form .tags>ul');
-			$ul.append('<li>' + text + '</li>')
+			var $li = $('<li>' + text + '<span></span></li>').appendTo($ul);
+			$li.children('span').click(function() {
+				$(this).parent().remove();
+			});
 		}
 
 		$('#add-form .tags .input-holder input').on('keyup', function(e) {

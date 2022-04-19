@@ -40,6 +40,21 @@ header {
 		flex-basis: 64px;
 	}
 
+	&.short {
+		height: 55px;
+		flex-basis: 55px;
+
+		@media (min-width: $adaptive-width-tablet) {
+			height: 72px;
+			flex-basis: 72px;
+		}
+
+		@media (min-width: $adaptive-width-desktop) {
+			height: 62px;
+			flex-basis: 62px;
+		}
+	}
+
 	& > .holder {
 		position: relative;
 	}
@@ -3794,6 +3809,30 @@ footer {
 
 				& + ul {
 					padding-top: 16px;
+				}
+			}
+
+			ul {
+				& > li {
+					position: relative;
+					padding-right: 28px;
+
+					&:hover {
+						border-color: $color-grey-light;
+					}
+
+					& > span {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 6px;
+						padding: 6px;
+						width: 9px;
+						height: 9px;
+						@include sizing(c);
+						background: url('../images/ico_delete4.svg') no-repeat center;
+						background-size: 9px 9px;
+					}
 				}
 			}
 		}
