@@ -63,7 +63,7 @@
 				</ul>
 			</div>
 
-			<div id="add-form" class="event">
+			<div id="add-form" class="event" onsubmit="return false;">
 				<div class="holder">
 					<h1>Добавить мероприятие</h1>
 
@@ -138,10 +138,25 @@
 								<span>Добавить еще дату</span>
 							</div>
 
-							<div class="section">
+							<div class="section tags">
 								<h3>Тэги</h3>
 
-								<input type="text" name="tags" maxlength="255" placeholder="Найти">
+								<div class="input-holder">
+									<input type="text" name="tags" maxlength="255" placeholder="Найти" autocomplete="off">
+
+									<!-- Варианты должны подтягиваться с ajax -->
+									<div class="dd">
+										<div class="item">духовные мероприятия</div>
+										<div class="item">новые</div>
+										<div class="item">образовательные мероприятия</div>
+									</div>
+								</div>
+
+								<!-- <ul>
+									<li>духовные мероприятия</li>
+									<li>новые</li>
+									<li>образовательные мероприятия</li>
+								</ul> -->
 							</div>
 
 							<div class="section logotype">
@@ -198,7 +213,7 @@
 							<div class="section contacts">
 								<h2>Контакты</h2>
 
-								<h4>сайт</h4>
+								<!-- <h4>сайт</h4>
 								<div class="input input-clearing">
 									<input type="text" name="site" maxlength="255" placeholder="Указать">
 									<span class="tool"></span>
@@ -208,10 +223,17 @@
 								<div class="input input-clearing">
 									<input type="email" name="email" maxlength="255" placeholder="Указать">
 									<span class="tool"></span>
-								</div>
+								</div> -->
 
-								<div class="add-contact" id="add-contact">
-									<span>Добавить контакт</span>
+								<div class="add-contact js-add-contact">
+									<span class="label">Добавить контакт</span>
+									<span class="dd">
+										<span class="item" data-input-name="site">Сайт</span>
+										<span class="item" data-input-name="email" data-input-type="email">Email</span>
+										<span class="item" data-input-name="tel" data-input-type="tel">Телефон</span>
+										<span class="item" data-input-name="telegram">Telegram</span>
+										<span class="item" data-input-name="whatsapp">Whatsapp</span>
+									</span>
 								</div>
 							</div>
 
@@ -232,12 +254,20 @@
 											<div class="search">
 												<input type="text" name="keyword" placeholder="Поиск по городам" autocomplete="off">
 												<input type="image" src="assets/images/ico_search.svg" class="ico">
+
+												<div class="dd">
+													<div class="item">Казань, ул. Дольская, д. 1</div>
+													<div class="item">Казань, ул. Дольская, д. 2</div>
+													<div class="item">Казань, ул. Дольская, д. 3</div>
+													<div class="item">Казань, ул. Дольская, д. 4</div>
+													<div class="item">Казань, ул. Дольская, д. 5</div>
+												</div>
 											</div>
 
-											<div class="flex">
+											<!-- <div class="flex">
 												<address>Казань, ул. Дольская, д. 1</address>
 												<span class="remove">Удалить точку</span>
-											</div>
+											</div> -->
 
 											<div id="map-modal"></div>
 
@@ -274,8 +304,14 @@
 										<li class="rb-line"><input type="radio" name="type" id="type2"><label for="type2">Бесплатно</label></li>
 										<li class="rb-line"><input type="radio" name="type" id="type3"><label for="type3">Плати сколько хочешь</label></li>
 									</ul>
+								</div>
 
-									<input type="text" name="date" maxlength="255" placeholder="Выберите" class="date">
+								<div class="half">
+									<div class="section">
+										<h3>Стоимость</h3>
+
+										<input type="text" name="price" maxlength="255" placeholder="Указать">
+									</div>
 								</div>
 							</div>
 							<div class="add-tariff" id="add-tariff">

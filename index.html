@@ -275,13 +275,16 @@
 					<h1>Мероприятия <sup>2230</sup></h1>
 
 					<div class="filter">
-						<div class="search">
-							<form action="search.html" method="post">
-								<input type="text" name="keyword" placeholder="Поиск по мероприятиям">
-								<input type="image" src="assets/images/ico_search.svg" class="ico">
-								<div class="clear"></div>
-							</form>
-						</div>
+						<form action="search.html" method="post">
+							<div class="search">
+								<div class="input-holder">
+									<input type="text" name="keyword" placeholder="Поиск по мероприятиям" autocomplete="off">
+									<input type="image" src="assets/images/ico_search.svg" class="ico">
+									<div class="clear"></div>
+								</div>
+								<button class="btn"><span>Найти</span></button>							
+							</div>
+						</form>
 						<div class="tags">
 							<ul>
 								<li class="select">
@@ -297,17 +300,17 @@
 										<div class="item"><input type="checkbox" name="t8" id="tags-t8"><label for="tags-t8">Вариант 8</label></div>
 									</div>
 								</li>
-								<li>духовные мероприятия</li>
-								<li>новые</li>
-								<li>образовательные мероприятия</li>
-								<li>праздники</li>
-								<li>для детей</li>
-								<li class="hidden">для взрослых</li>
-								<li class="hidden">духовные мероприятия</li>
-								<li class="hidden">образовательные мероприятия</li>
-								<li class="hidden">праздники</li>
-								<li class="hidden">новые</li>
-								<li class="hidden">для детей</li>
+								<li>духовные мероприятия<span></span></li>
+								<li>новые<span></span></li>
+								<li>образовательные мероприятия<span></span></li>
+								<li>праздники<span></span></li>
+								<li>для детей<span></span></li>
+								<li class="hidden">для взрослых<span></span></li>
+								<li class="hidden">духовные мероприятия<span></span></li>
+								<li class="hidden">образовательные мероприятия<span></span></li>
+								<li class="hidden">праздники<span></span></li>
+								<li class="hidden">новые<span></span></li>
+								<li class="hidden">для детей<span></span></li>
 								<li class="more">Еще</li>
 							</ul>
 						</div>
@@ -416,6 +419,35 @@
 								<span class="date">18 фераля, 10:00, онлайн</span>
 								<span class="distance">500 м</span>
 							</li>
+
+							<li class="skeleton">
+								<span class="photo"></span>
+								<span class="title"></span>
+								<span class="subtitle"></span>
+								<span class="date"></span>
+								<span class="distance"></span>
+							</li>
+							<li class="skeleton">
+								<span class="photo"></span>
+								<span class="title"></span>
+								<span class="subtitle"></span>
+								<span class="date"></span>
+								<span class="distance"></span>
+							</li>
+							<li class="skeleton">
+								<span class="photo"></span>
+								<span class="title"></span>
+								<span class="subtitle"></span>
+								<span class="date"></span>
+								<span class="distance"></span>
+							</li>
+							<li class="skeleton">
+								<span class="photo"></span>
+								<span class="title"></span>
+								<span class="subtitle"></span>
+								<span class="date"></span>
+								<span class="distance"></span>
+							</li>
 						</ul>
 
 						<div class="btn-line">
@@ -482,7 +514,7 @@
 											<svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
 											 	<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954"></circle>
 											  	<circle class="donut-ring" cx="21" cy="21" r="15.91549430918954"></circle>
-											  	<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="45 30" stroke-dashoffset="0"></circle>
+											  	<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
 											</svg>
 											<div class="status">Загрузка <span class="percent">12</span>%</div>
 
@@ -538,6 +570,6 @@
 
 	<div id="modal-fadeout"></div>
 
-	<script src="/assets/js/scripts.js"></script>
+	<script src="/assets/js/scripts.js?1"></script>
 </body>
 </html>

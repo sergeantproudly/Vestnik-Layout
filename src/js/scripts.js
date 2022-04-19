@@ -225,10 +225,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		$('.search .clear').click(function() {
 			$(this).stop().fadeOut(__animationSpeed).siblings('input:text').val('');
 		});
+		// При фокусе на поле
+		$('.filter .search input:text').on('focusin', function() {
+			$(this).closest('.search').addClass('focused');
+			$('html').addClass('faded');
+		}).on('focusout', function() {
+			//$(this).closest('.search').removeClass('focused');
+			//$('html').removeClass('faded');
+		});
 	}
 
 	// Тэги
-	if ($('.tags').length) {
+	if ($('.filter .tags').length) {
 		// При клике на тег он подсвечивается
 		$('.tags li').not('.select, .more').click(function(e) {
 			e.preventDefault();
@@ -356,10 +364,40 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
-	// Добавление еще даты в форме создания
 	if ($('#add-form').length) {
+		// Добавление еще даты в форме создания
 		$('#add-date-time').click(function() {
 			$('#date-time').clone().removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+		});
+
+		// Добавление тегов
+		function addFormTag(text) {
+			if (!$('#add-form .tags>ul').length) $('#add-form .tags').append('<ul></ul>');
+			var $ul = $('#add-form .tags>ul');
+			$ul.append('<li>' + text + '</li>')
+		}
+
+		$('#add-form .tags .input-holder input').on('keyup', function(e) {
+			if (!e)e = window.event;
+			var key = e.keyCode||e.which;
+
+			// Нажатие на Enter
+			if (key == 13) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				addFormTag($(this).val());
+				$(this).val('');
+				$(this).closest('.input-holder').removeClass('opened');
+			} else {
+				// здесь должен быть ajax запрос
+
+				$(this).closest('.input-holder').addClass('opened');
+			}
+		});
+		$('#add-form .tags .input-holder .dd>.item').click(function() {
+			addFormTag($(this).text());
+			$(this).closest('.input-holder').removeClass('opened').find('input:text').val('');
 		});
 	}
 
@@ -428,6 +466,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		$progress = $('#upload-file-progress');
 		percent = parseInt((event.loaded / event.total) * 100);
 		$progress.find('.percent').text(percent);
+		$progress.find('.donut-segment').attr('stroke-dasharray', percent + ' ' + (100 - percent));
 	}
 
 	function completeHandler(event) {
@@ -455,5 +494,48 @@ document.addEventListener('DOMContentLoaded', function() {
 		$uploadHolder.find('.init').hide()
 			.siblings('.progress').show();
 	});
+
+	if ($('.js-add-contact').length) {
+		$('.js-add-contact .label').click(function() {
+			$(this).closest('.add-contact').toggleClass('opened');
+		});
+		$('.js-add-contact .dd .item').click(function() {
+			var $holder = $(this).closest('.add-contact');
+			var label = $(this).text();
+			var type = $(this).attr('data-input-type');
+			var name = $(this).attr('data-input-name');
+			$('<h4>' + label + '</h4><div class="input"><input type="' + (type ? type : 'text') + '" name="' + name + '" maxlength="255" placeholder="Указать"><span class="tool tool-remove"></span></div>').insertBefore($holder);
+			$holder.prev('.input').find('.tool-remove').click(function() {
+				var $inp = $(this).closest('.input');
+				var $h = $inp.prev('h4, .h4');
+				$inp.remove();
+				$h.remove();
+			});
+			$holder.removeClass('opened');
+		});
+	}
+
+	// модал выбора местоположения
+	if ($('#modal-address').length) {
+		$('#modal-address .search input').on('keyup', function(e) {
+			if (!e)e = window.event;
+			e.preventDefault();
+
+			// здесь должен быть ajax запрос
+
+			$(this).closest('.search').addClass('opened');
+		});
+		// выбор города
+		$('#modal-address .search .dd>.item').click(function() {
+			var text = $(this).text();
+			$('<div class="flex"><address>' + text + '</address><span class="remove">Удалить точку</span></div>').insertAfter($('#modal-address .search'));
+			$('#modal-address .search').next('.flex').find('.remove').click(function() {
+				$(this).closest('.flex').remove();
+			});
+			
+			$(this).closest('.search').find('input').val('');
+			$(this).closest('.search').removeClass('opened');
+		});
+	}
 
 });

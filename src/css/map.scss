@@ -328,7 +328,8 @@
 						margin-top: 0;
 					}
 
-					& > a {
+					& > a,
+					& > .a {
 						display: block;
 						text-decoration: none;
 						@include fs(14);
@@ -548,7 +549,8 @@
 						margin-top: 0;
 					}
 
-					& > a {
+					& > a,
+					& > .a {
 						display: block;
 						text-decoration: none;
 						@include fs(14);
@@ -909,7 +911,8 @@
 						margin-top: 0;
 					}
 
-					& > a {
+					& > a,
+					& > .a {
 						display: block;
 						text-decoration: none;
 						@include fs(14);
@@ -1129,7 +1132,8 @@
 						margin-top: 0;
 					}
 
-					& > a {
+					& > a,
+					& > .a {
 						display: block;
 						text-decoration: none;
 						@include fs(14);

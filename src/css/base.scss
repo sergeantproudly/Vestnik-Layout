@@ -9,6 +9,34 @@ html.html-modal {
 html.html-modal-long {
 	height: auto !important;
 }
+html.faded {
+	body {
+		#layout {
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.05);
+				z-index: 5;
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				#catalogue,
+				#organisations {
+					h1,
+					.h1 {
+						opacity: 0;
+						@include transition(opacity);
+					}
+				}
+			}
+		}
+	}
+}
 body {
 	font-family: $font-first;
 	font-weight: 400;
