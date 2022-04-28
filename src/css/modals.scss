@@ -210,8 +210,12 @@
 
 		.modal-location & {
 			@media (min-width: $adaptive-width-tablet) {
-				padding: 40px 30px 30px;
+				padding: 40px 50px 30px;
 				max-width: 1000px;
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				padding: 40px 60px;
 			}
 
 			.search {
@@ -257,7 +261,7 @@
 				}
 
 				@media (min-width: $adaptive-width-desktop) {
-					column-count: 4;
+					column-count: 3;
 					column-gap: 6%;					
 				}
 

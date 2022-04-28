@@ -36,117 +36,121 @@
 </head>
 
 <body>
-	<div id="layout">
-		<header>
-			<div class="holder">
-				<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
-				<div id="location">Казань</div>
-				<a href="#" id="log-in">Войти</a>
-				<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
-				<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
-				<div id="ico-burger"></div>
-			</div>
-		</header>
+	<div id="__nuxt">
+		<div id="__layout">
+			<div id="layout">
+				<header>
+					<div class="holder">
+						<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
+						<div id="location">Казань</div>
+						<a href="#" id="log-in">Войти</a>
+						<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
+						<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
+						<div id="ico-burger"></div>
+					</div>
+				</header>
 
-		<main class="body">
-			<nav id="mn-main" class="tabs">
-				<ul class="holder">
-					<li><a href="/">Мероприятия</a></li>
-					<li><a href="organisations.html" class="curr">Организации</a></li>
-				</ul>
-			</nav>
+				<main class="body">
+					<nav id="mn-main" class="tabs">
+						<ul class="holder">
+							<li><a href="/">Мероприятия</a></li>
+							<li><a href="organisations.html" class="curr">Организации</a></li>
+						</ul>
+					</nav>
 
-			<section id="organisations">
-				<div class="holder">
-					<h1>Организации <sup>2230</sup></h1>
+					<section id="organisations">
+						<div class="holder">
+							<h1>Организации <sup>2230</sup></h1>
 
-					<div class="filter">
-						<div class="search">
-							<form action="search.html" method="post">
-								<input type="text" name="keyword" placeholder="Поиск по организациям">
-								<input type="image" src="assets/images/ico_search.svg" class="ico">
-								<div class="clear"></div>
-							</form>
-						</div>
-						<div class="tags">
-							<ul>
-								<li class="select">
-									<div class="label">Тип мероприятия</div>
-									<div class="dd">
-										<div class="item"><input type="checkbox" name="t1" id="tags-t1"><label for="tags-t1">Мастеркласс</label></div>
-										<div class="item"><input type="checkbox" name="t2" id="tags-t2"><label for="tags-t2">Семинар</label></div>
-										<div class="item"><input type="checkbox" name="t3" id="tags-t3"><label for="tags-t3">Праздник</label></div>
-										<div class="item"><input type="checkbox" name="t4" id="tags-t4"><label for="tags-t4">Вариант 4</label></div>
-										<div class="item"><input type="checkbox" name="t5" id="tags-t5"><label for="tags-t5">Вариант 5</label></div>
-										<div class="item"><input type="checkbox" name="t6" id="tags-t6"><label for="tags-t6">Вариант 6</label></div>
-										<div class="item"><input type="checkbox" name="t7" id="tags-t7"><label for="tags-t7">Вариант 7</label></div>
-										<div class="item"><input type="checkbox" name="t8" id="tags-t8"><label for="tags-t8">Вариант 8</label></div>
+							<div class="filter">
+								<div class="search">
+									<form action="search.html" method="post">
+										<input type="text" name="keyword" placeholder="Поиск по организациям">
+										<input type="image" src="assets/images/ico_search.svg" class="ico">
+										<div class="clear"></div>
+									</form>
+								</div>
+								<div class="tags">
+									<ul>
+										<li class="select">
+											<div class="label">Тип мероприятия</div>
+											<div class="dd">
+												<div class="item"><input type="checkbox" name="t1" id="tags-t1"><label for="tags-t1">Мастеркласс</label></div>
+												<div class="item"><input type="checkbox" name="t2" id="tags-t2"><label for="tags-t2">Семинар</label></div>
+												<div class="item"><input type="checkbox" name="t3" id="tags-t3"><label for="tags-t3">Праздник</label></div>
+												<div class="item"><input type="checkbox" name="t4" id="tags-t4"><label for="tags-t4">Вариант 4</label></div>
+												<div class="item"><input type="checkbox" name="t5" id="tags-t5"><label for="tags-t5">Вариант 5</label></div>
+												<div class="item"><input type="checkbox" name="t6" id="tags-t6"><label for="tags-t6">Вариант 6</label></div>
+												<div class="item"><input type="checkbox" name="t7" id="tags-t7"><label for="tags-t7">Вариант 7</label></div>
+												<div class="item"><input type="checkbox" name="t8" id="tags-t8"><label for="tags-t8">Вариант 8</label></div>
+											</div>
+										</li>
+										<li>духовные мероприятия</li>
+										<li>новые</li>
+										<li>образовательные мероприятия</li>
+										<li>праздники</li>
+										<li>для детей</li>
+										<li class="hidden">для взрослых</li>
+										<li class="hidden">духовные мероприятия</li>
+										<li class="hidden">образовательные мероприятия</li>
+										<li class="hidden">праздники</li>
+										<li class="hidden">новые</li>
+										<li class="hidden">для детей</li>
+										<li class="more">Еще</li>
+									</ul>
+								</div>
+								<div class="flex">
+									<div class="types">
+										<ul>
+											<li><a href="#" class="curr">Все</a></li>
+											<li><a href="#">Избранные</a></li>
+											<li><a href="#">Мои</a></li>
+										</ul>
 									</div>
-								</li>
-								<li>духовные мероприятия</li>
-								<li>новые</li>
-								<li>образовательные мероприятия</li>
-								<li>праздники</li>
-								<li>для детей</li>
-								<li class="hidden">для взрослых</li>
-								<li class="hidden">духовные мероприятия</li>
-								<li class="hidden">образовательные мероприятия</li>
-								<li class="hidden">праздники</li>
-								<li class="hidden">новые</li>
-								<li class="hidden">для детей</li>
-								<li class="more">Еще</li>
-							</ul>
-						</div>
-						<div class="flex">
-							<div class="types">
-								<ul>
-									<li><a href="#" class="curr">Все</a></li>
-									<li><a href="#">Избранные</a></li>
-									<li><a href="#">Мои</a></li>
-								</ul>
+									<div class="view-types">
+										<ul>
+											<li>
+												<a href="organisations.html" class="list">Списком</a>
+											</li>
+											<li>
+												<a href="organisations-map.html" class="map curr">На карте</a>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<div class="view-types">
-								<ul>
-									<li>
-										<a href="organisations.html" class="list">Списком</a>
-									</li>
-									<li>
-										<a href="organisations-map.html" class="map curr">На карте</a>
-									</li>
-								</ul>
+
+							<div id="map">
 							</div>
 						</div>
+					</section>
+				</main>
+
+				<footer>
+					<div class="holder">
+						<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
+						<div id="bottom-info">
+							<div id="copyright">&copy;2022 ООО «Вестник»</div>
+							<a href="#" id="terms-link">Пользовательское соглашение</a>
+						</div>
+						<a href="#" id="about-link">О проекте</a>
+						<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
 					</div>
+				</footer>
 
-					<div id="map">
+				<div id="burger-menu">
+					<div class="mn-main">
+						<ul>
+							<li><a href="#">О проекте</a></li>
+						</ul>
 					</div>
+					<div class="close"></div>
 				</div>
-			</section>
-		</main>
-
-		<footer>
-			<div class="holder">
-				<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
-				<div id="bottom-info">
-					<div id="copyright">&copy;2022 ООО «Вестник»</div>
-					<a href="#" id="terms-link">Пользовательское соглашение</a>
-				</div>
-				<a href="#" id="about-link">О проекте</a>
-				<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
 			</div>
-		</footer>
 
-		<div id="burger-menu">
-			<div class="mn-main">
-				<ul>
-					<li><a href="#">О проекте</a></li>
-				</ul>
-			</div>
-			<div class="close"></div>
+			<div id="modal-fadeout"></div>
 		</div>
 	</div>
-
-	<div id="modal-fadeout"></div>
 
 	<script src="/assets/js/scripts.js"></script>
 	<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>

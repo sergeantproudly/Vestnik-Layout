@@ -15,6 +15,11 @@ html {
 	min-width: 320px;
 }
 
+#__nuxt,
+#__layout {
+	height: 100%;
+}
+
 #layout {
 	display: flex;
 	flex-direction: column;
@@ -1665,7 +1670,6 @@ footer {
 				display: block;
 				height: 208px;
 				position: relative;
-				@include transition(opacity);
 				margin-bottom: 20px;
 
 				@media (min-width: $adaptive-width-tablet) {
@@ -1677,14 +1681,17 @@ footer {
 				}
 
 				&:hover {
-					opacity: .6;
-					@include transition(opacity);
+					& > img {
+						opacity: .6;
+						@include transition(opacity);
+					}
 				}
 
 				& > img {
 					display: block;
 					@include fit();
 					@include radius(8px);
+					@include transition(opacity);
 				}
 
 				&.no-photo {
@@ -4231,7 +4238,6 @@ footer {
 				position: relative;
 				margin-bottom: 20px;
 				@include radius(8px);
-				@include transition(opacity);
 
 				@media (min-width: $adaptive-width-tablet) {
 					height: 298px;
@@ -4242,13 +4248,16 @@ footer {
 				}
 
 				&:hover {
-					opacity: .6;
-					@include transition(opacity);
+					& > img {
+						opacity: .6;
+						@include transition(opacity);
+					}
 				}
 
 				& > img {
 					display: block;
 					@include contain();
+					@include transition(opacity);
 				}
 
 				&.no-photo {

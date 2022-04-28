@@ -36,73 +36,77 @@
 </head>
 
 <body>
-	<div id="layout">
-		<header>
-			<div class="holder">
-				<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
-				<div id="location">Казань</div>
-				<a href="#" id="log-in">Войти</a>
-				<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
-				<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
-				<div id="ico-burger"></div>
-			</div>
-		</header>
-
-		<main class="body">
-			<nav id="mn-main" class="tabs">
-				<ul class="holder">
-					<li><a href="/" class="curr">Мероприятия</a></li>
-					<li><a href="organisations.html">Организации</a></li>
-				</ul>
-			</nav>
-
-			<section id="catalogue">
-				<div class="holder">
-					<form action="search.html" method="post">
-						<div class="search search-wide">						
-							<div class="input-holder">
-								<input type="text" name="keyword" placeholder="Поиск по мероприятиям" value="М4сл3ница">
-								<input type="image" src="assets/images/ico_search.svg" class="ico">
-								<div class="clear"></div>
-							</div>
-							<button class="btn"><span>Найти</span></button>						
-						</div>
-					</form>
-
-					<div class="page-illustration empty">
-						<h1>Увы, ничего не найдено</h1>
-						
-						<div class="text">
-							<p>Проверьте правильность написания или попробуйте другой запрос</p>
-						</div>
+	<div id="__nuxt">
+		<div id="__layout">
+			<div id="layout">
+				<header>
+					<div class="holder">
+						<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
+						<div id="location">Казань</div>
+						<a href="#" id="log-in">Войти</a>
+						<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
+						<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
+						<div id="ico-burger"></div>
 					</div>
-				</div>
-			</section>
-		</main>
+				</header>
 
-		<footer>
-			<div class="holder">
-				<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
-				<div id="bottom-info">
-					<div id="copyright">&copy;2022 ООО «Вестник»</div>
-					<a href="#" id="terms-link">Пользовательское соглашение</a>
-				</div>
-				<a href="#" id="about-link">О проекте</a>
-				<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
-			</div>
-		</footer>
+				<main class="body">
+					<nav id="mn-main" class="tabs">
+						<ul class="holder">
+							<li><a href="/" class="curr">Мероприятия</a></li>
+							<li><a href="organisations.html">Организации</a></li>
+						</ul>
+					</nav>
 
-		<div id="burger-menu">
-			<div class="mn-main">
-				<ul>
-					<li><a href="#">О проекте</a></li>
-				</ul>
+					<section id="catalogue">
+						<div class="holder">
+							<form action="search.html" method="post">
+								<div class="search search-wide">						
+									<div class="input-holder">
+										<input type="text" name="keyword" placeholder="Поиск по мероприятиям" value="М4сл3ница">
+										<input type="image" src="assets/images/ico_search.svg" class="ico">
+										<div class="clear"></div>
+									</div>
+									<button class="btn"><span>Найти</span></button>						
+								</div>
+							</form>
+
+							<div class="page-illustration empty">
+								<h1>Увы, ничего не найдено</h1>
+								
+								<div class="text">
+									<p>Проверьте правильность написания или попробуйте другой запрос</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+
+				<footer>
+					<div class="holder">
+						<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
+						<div id="bottom-info">
+							<div id="copyright">&copy;2022 ООО «Вестник»</div>
+							<a href="#" id="terms-link">Пользовательское соглашение</a>
+						</div>
+						<a href="#" id="about-link">О проекте</a>
+						<a href="#" id="btn-feedback"><span>Обратная связь</span></a>
+					</div>
+				</footer>
+
+				<div id="burger-menu">
+					<div class="mn-main">
+						<ul>
+							<li><a href="#">О проекте</a></li>
+						</ul>
+					</div>
+					<div class="close"></div>
+				</div>
 			</div>
-			<div class="close"></div>
+
+			<div id="modal-fadeout"></div>
 		</div>
 	</div>
-
-	<div id="modal-fadeout"></div>
 
 	<script src="/assets/js/scripts.js"></script>
 </body>

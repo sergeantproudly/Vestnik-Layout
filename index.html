@@ -36,539 +36,543 @@
 </head>
 
 <body>
-	<div id="layout">
-		<header>
-			<div class="holder">
-				<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
-				<div id="location" class="js-modal-link" data-target="#modal-location">Казань</div>
-				<a href="#modal-login" id="log-in" class="js-modal-link">Войти</a>
-				<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
-				<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
-				<div id="ico-burger"></div>
+	<div id="__nuxt">
+		<div id="__layout">
+			<div id="layout">
+				<header>
+					<div class="holder">
+						<a href="/" id="logo"><img src="assets/images/logo.svg" alt="#" title="#"/></a>
+						<div id="location" class="js-modal-link" data-target="#modal-location">Казань</div>
+						<a href="#modal-login" id="log-in" class="js-modal-link">Войти</a>
+						<!-- <a href="#" id="logged-in"><span>Михаил Шаверов</span></a> -->
+						<a href="new.html" id="hot-news">МЧС: Ветер на юге Казани достигнет 20 м/c</a>
+						<div id="ico-burger"></div>
 
-				<!-- modal location -->
-				<div class="modal-wrapper modal-location" data-long="true" id="modal-location">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" role="button" title="Закрыть">×</div>
+						<!-- modal location -->
+						<div class="modal-wrapper modal-location" data-long="true" id="modal-location">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" role="button" title="Закрыть">×</div>
 
-							<div class="h1">Ваш город</div>
-							<div class="search">
-								<input type="text" name="keyword" placeholder="Поиск по городам" autocomplete="off">
-								<input type="image" src="assets/images/ico_search.svg" class="ico">
+									<div class="h1">Ваш город</div>
+									<div class="search">
+										<input type="text" name="keyword" placeholder="Поиск по городам" autocomplete="off">
+										<input type="image" src="assets/images/ico_search.svg" class="ico">
+									</div>
+
+									<ul class="list">
+										<li><a href="#">Москва и область</a></li>
+										<li><a href="#">Санкт-Петербург и ЛО</a></li>
+										<li><a href="#">Владивосток</a></li>
+										<li><a href="#">Волгоград</a></li>
+										<li><a href="#">Воронеж</a></li>
+										<li><a href="#">Екатеринбург</a></li>
+										<li><a href="#">Иркутск</a></li>
+										<li class="curr"><a href="#">Казань</a></li>
+										<li><a href="#">Кемерово</a></li>
+										<li><a href="#">Петропавловск-Камчатский</a></li>
+										<li class="mobile-hidden"><a href="#">Красноярск</a></li>
+										<li class="mobile-hidden"><a href="#">Нижний Новгород</a></li>
+										<li class="mobile-hidden"><a href="#">Новокузнецк</a></li>
+										<li class="mobile-hidden"><a href="#">Новосибирск</a></li>
+										<li class="mobile-hidden"><a href="#">Омск</a></li>
+										<li class="mobile-hidden"><a href="#">Пермь</a></li>
+										<li class="mobile-hidden"><a href="#">Ростов-на-Дону</a></li>
+										<li class="mobile-hidden"><a href="#">Самара</a></li>
+										<li class="mobile-hidden"><a href="#">Сочи</a></li>
+										<li class="mobile-hidden"><a href="#">Сургут</a></li>
+										<li class="mobile-hidden"><a href="#">Томск</a></li>
+										<li class="mobile-hidden"><a href="#">Тюмень</a></li>
+										<li class="mobile-hidden"><a href="#">Уфа</a></li>
+										<li class="mobile-hidden"><a href="#">Хабаровск</a></li>
+										<li class="mobile-hidden"><a href="#">Челябинск</a></li>
+										<li class="mobile-hidden"><a href="#">Кемерово</a></li>
+										<li class="mobile-hidden"><a href="#">Краснодар</a></li>
+										<li class="more">еще 233</li>
+										<li class="mobile-more" data-text="Развернуть все" data-opened-text="Свернуть все"><span>Развернуть все</span></li>
+									</ul>
+
+									<div class="not-found">
+										<div class="h2">К сожалению, ваш город найти не удалось</div>
+										<div class="text">
+											<p>Проверьте правильность написания и попробуйте еще раз</p>
+										</div>
+									</div>
+								</div>
 							</div>
+						</div>
 
-							<ul class="list">
-								<li><a href="#">Москва и область</a></li>
-								<li><a href="#">Санкт-Петербург и ЛО</a></li>
-								<li><a href="#">Владивосток</a></li>
-								<li><a href="#">Волгоград</a></li>
-								<li><a href="#">Воронеж</a></li>
-								<li><a href="#">Екатеринбург</a></li>
-								<li><a href="#">Иркутск</a></li>
-								<li class="curr"><a href="#">Казань</a></li>
-								<li><a href="#">Кемерово</a></li>
-								<li><a href="#">Краснодар</a></li>
-								<li class="mobile-hidden"><a href="#">Красноярск</a></li>
-								<li class="mobile-hidden"><a href="#">Нижний Новгород</a></li>
-								<li class="mobile-hidden"><a href="#">Новокузнецк</a></li>
-								<li class="mobile-hidden"><a href="#">Новосибирск</a></li>
-								<li class="mobile-hidden"><a href="#">Омск</a></li>
-								<li class="mobile-hidden"><a href="#">Пермь</a></li>
-								<li class="mobile-hidden"><a href="#">Ростов-на-Дону</a></li>
-								<li class="mobile-hidden"><a href="#">Самара</a></li>
-								<li class="mobile-hidden"><a href="#">Сочи</a></li>
-								<li class="mobile-hidden"><a href="#">Сургут</a></li>
-								<li class="mobile-hidden"><a href="#">Томск</a></li>
-								<li class="mobile-hidden"><a href="#">Тюмень</a></li>
-								<li class="mobile-hidden"><a href="#">Уфа</a></li>
-								<li class="mobile-hidden"><a href="#">Хабаровск</a></li>
-								<li class="mobile-hidden"><a href="#">Челябинск</a></li>
-								<li class="mobile-hidden"><a href="#">Кемерово</a></li>
-								<li class="mobile-hidden"><a href="#">Краснодар</a></li>
-								<li class="more">еще 233</li>
-								<li class="mobile-more" data-text="Развернуть все" data-opened-text="Свернуть все"><span>Развернуть все</span></li>
-							</ul>
+						<!-- modal login -->
+						<div class="modal-wrapper modal-login" id="modal-login">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
 
-							<div class="not-found">
-								<div class="h2">К сожалению, ваш город найти не удалось</div>
-								<div class="text">
-									<p>Проверьте правильность написания и попробуйте еще раз</p>
+									<div class="h1">Авторизация</div>
+									<div class="form" id="form-authorisation">
+										<form action="#" method="post">
+											<div class="input input-clearing">
+												<input type="email" name="email" placeholder="E-mail" maxlength="255">
+												<i>E-mail</i>
+												<span class="tool"></span>
+											</div>
+											<div class="input input-password inphidden">
+												<input type="password" name="password" placeholder="Пароль" maxlength="255">
+												<i>Пароль</i>
+												<span class="tool"></span>
+											</div>
+											<button class="btn" disabled="disabled">Войти</button>
+											<a href="#modal-forget" class="forget js-modal-link">Забыли пароль?</a>
+										</form>
+									</div>
+									<div class="continue">Нет аккаунта? <a href="#modal-registration" class="js-modal-link">Зарегистрироваться</a></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- modal forget -->
+						<div class="modal-wrapper modal-forget" id="modal-forget">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Восставить пароль</div>
+									<div class="text">
+										<p>Введите адрес электронной почты, на который был зарегистрирован аккаунт</p>
+									</div>
+									<div class="form" id="form-forget">
+										<form action="#" method="post">
+											<div class="input input-clearing">
+												<input type="email" name="email" placeholder="E-mail" maxlength="255" value="mshaverov@gmail.com">
+												<i>E-mail</i>
+												<span class="tool"></span>
+											</div>
+											<button class="btn js-modal-link" data-target="#modal-confirmation-password">Сбросить пароль</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- modal confirmation-password -->
+						<div class="modal-wrapper modal-confirmation-password" id="modal-confirmation-password">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Придумайте новый пароль</div>
+									<div class="text">
+										<p>Придумайте новый пароль для своего аккаунта</p>
+									</div>
+									<div class="form" id="form-confirmation-password">
+										<form action="#" method="post">
+											<div class="input">
+												<input type="text" name="code" placeholder="Код из письма" maxlength="255">
+												<i>Код из письма</i>
+												<span class="tool"></span>
+											</div>
+											<div class="input input-password inphidden">
+												<input type="password" name="password" placeholder="Новый пароль" maxlength="255">
+												<i>Новый пароль</i>
+												<span class="tool"></span>
+											</div>
+											<div class="input input-password inphidden">
+												<input type="password" name="password" placeholder="Новый пароль еще раз" maxlength="255">
+												<i>Новый пароль еще раз</i>
+												<span class="tool"></span>
+											</div>
+											<button class="btn js-modal-link" data-target="#modal-password-done">Сохранить новый пароль</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- modal done -->
+						<div class="modal-wrapper modal-done" id="modal-password-done">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Пароль успешно изменен!</div>
+									<button class="btn js-cancel">Хорошо</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- modal registration -->
+						<div class="modal-wrapper modal-registration" id="modal-registration">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Регистрация</div>
+									<div class="form" id="form-registration">
+										<form action="#" method="post">
+											<div class="input">
+												<input type="text" name="name" placeholder="Имя" maxlength="255">
+												<i>Имя</i>
+											</div>
+											<div class="input">
+												<input type="email" name="email" placeholder="E-mail" maxlength="255">
+												<i>E-mail</i>
+											</div>
+											<div class="input input-password inphidden">
+												<input type="password" name="password" placeholder="Пароль" maxlength="255">
+												<i>Пароль</i>
+												<span class="tool"></span>
+											</div>
+											<div class="input input-password inphidden">
+												<input type="password" name="password2" placeholder="Пароль еще раз" maxlength="255">
+												<i>Пароль еще раз</i>
+												<span class="tool"></span>
+											</div>
+											<!-- ДЕМО ОШИБКИ
+											<div class="message error">Пароли не совпадают</div>
+											-->
+											<div class="conditions"><input type="checkbox" name="agree" id="registration-conditions-agree" checked="checked"><label for="registration-conditions-agree">Даю согласие на обработку <br><a href="#" target="_blank">персональных данных</a></label></div>
+											<button class="btn js-modal-link" data-target="#modal-confirmation-registration">Зарегистрироваться</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- modal confirmation-registration -->
+						<div class="modal-wrapper modal-confirmation-registration" id="modal-confirmation-registration">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Код подтверждения</div>
+									<div class="text">
+										<p>Введите четырехзначный код, отправленный на email</p>
+									</div>
+									<div class="form" id="form-confirmation-registration">
+										<form action="#" method="post">
+											<div class="input">
+												<input type="text" name="code" placeholder="Код из письма" maxlength="255">
+												<i>Код подтверждения</i>
+												<span class="tool"></span>
+											</div>
+											<button class="btn js-modal-link" data-target="#modal-password-done">Сбросить пароль</button>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</header>
 
-				<!-- modal login -->
-				<div class="modal-wrapper modal-login" id="modal-login">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Авторизация</div>
-							<div class="form" id="form-authorisation">
-								<form action="#" method="post">
-									<div class="input input-clearing">
-										<input type="email" name="email" placeholder="E-mail" maxlength="255">
-										<i>E-mail</i>
-										<span class="tool"></span>
-									</div>
-									<div class="input input-password inphidden">
-										<input type="password" name="password" placeholder="Пароль" maxlength="255">
-										<i>Пароль</i>
-										<span class="tool"></span>
-									</div>
-									<button class="btn" disabled="disabled">Войти</button>
-									<a href="#modal-forget" class="forget js-modal-link">Забыли пароль?</a>
-								</form>
-							</div>
-							<div class="continue">Нет аккаунта? <a href="#modal-registration" class="js-modal-link">Зарегистрироваться</a></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- modal forget -->
-				<div class="modal-wrapper modal-forget" id="modal-forget">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Восставить пароль</div>
-							<div class="text">
-								<p>Введите адрес электронной почты, на который был зарегистрирован аккаунт</p>
-							</div>
-							<div class="form" id="form-forget">
-								<form action="#" method="post">
-									<div class="input input-clearing">
-										<input type="email" name="email" placeholder="E-mail" maxlength="255" value="mshaverov@gmail.com">
-										<i>E-mail</i>
-										<span class="tool"></span>
-									</div>
-									<button class="btn js-modal-link" data-target="#modal-confirmation-password">Сбросить пароль</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- modal confirmation-password -->
-				<div class="modal-wrapper modal-confirmation-password" id="modal-confirmation-password">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Придумайте новый пароль</div>
-							<div class="text">
-								<p>Придумайте новый пароль для своего аккаунта</p>
-							</div>
-							<div class="form" id="form-confirmation-password">
-								<form action="#" method="post">
-									<div class="input">
-										<input type="text" name="code" placeholder="Код из письма" maxlength="255">
-										<i>Код из письма</i>
-										<span class="tool"></span>
-									</div>
-									<div class="input input-password inphidden">
-										<input type="password" name="password" placeholder="Новый пароль" maxlength="255">
-										<i>Новый пароль</i>
-										<span class="tool"></span>
-									</div>
-									<div class="input input-password inphidden">
-										<input type="password" name="password" placeholder="Новый пароль еще раз" maxlength="255">
-										<i>Новый пароль еще раз</i>
-										<span class="tool"></span>
-									</div>
-									<button class="btn js-modal-link" data-target="#modal-password-done">Сохранить новый пароль</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- modal done -->
-				<div class="modal-wrapper modal-done" id="modal-password-done">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Пароль успешно изменен!</div>
-							<button class="btn js-cancel">Хорошо</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- modal registration -->
-				<div class="modal-wrapper modal-registration" id="modal-registration">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Регистрация</div>
-							<div class="form" id="form-registration">
-								<form action="#" method="post">
-									<div class="input">
-										<input type="text" name="name" placeholder="Имя" maxlength="255">
-										<i>Имя</i>
-									</div>
-									<div class="input">
-										<input type="email" name="email" placeholder="E-mail" maxlength="255">
-										<i>E-mail</i>
-									</div>
-									<div class="input input-password inphidden">
-										<input type="password" name="password" placeholder="Пароль" maxlength="255">
-										<i>Пароль</i>
-										<span class="tool"></span>
-									</div>
-									<div class="input input-password inphidden">
-										<input type="password" name="password2" placeholder="Пароль еще раз" maxlength="255">
-										<i>Пароль еще раз</i>
-										<span class="tool"></span>
-									</div>
-									<!-- ДЕМО ОШИБКИ
-									<div class="message error">Пароли не совпадают</div>
-									-->
-									<div class="conditions"><input type="checkbox" name="agree" id="registration-conditions-agree" checked="checked"><label for="registration-conditions-agree">Даю согласие на обработку <br><a href="#" target="_blank">персональных данных</a></label></div>
-									<button class="btn js-modal-link" data-target="#modal-confirmation-registration">Зарегистрироваться</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- modal confirmation-registration -->
-				<div class="modal-wrapper modal-confirmation-registration" id="modal-confirmation-registration">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Код подтверждения</div>
-							<div class="text">
-								<p>Введите четырехзначный код, отправленный на email</p>
-							</div>
-							<div class="form" id="form-confirmation-registration">
-								<form action="#" method="post">
-									<div class="input">
-										<input type="text" name="code" placeholder="Код из письма" maxlength="255">
-										<i>Код подтверждения</i>
-										<span class="tool"></span>
-									</div>
-									<button class="btn js-modal-link" data-target="#modal-password-done">Сбросить пароль</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<main class="body">
-			<nav id="mn-main" class="tabs">
-				<ul class="holder">
-					<li><a href="/" class="curr">Мероприятия</a></li>
-					<li><a href="organisations.html">Организации</a></li>
-				</ul>
-			</nav>
-
-			<section id="catalogue">
-				<div class="holder">
-					<h1>Мероприятия <sup>2230</sup></h1>
-
-					<div class="filter">
-						<form action="search.html" method="post">
-							<div class="search">
-								<div class="input-holder">
-									<input type="text" name="keyword" placeholder="Поиск по мероприятиям" autocomplete="off">
-									<input type="image" src="assets/images/ico_search.svg" class="ico">
-									<div class="clear"></div>
-								</div>
-								<button class="btn"><span>Найти</span></button>							
-							</div>
-						</form>
-						<div class="tags">
-							<ul>
-								<li class="select">
-									<div class="label">Тип мероприятия</div>
-									<div class="dd">
-										<div class="item"><input type="checkbox" name="t1" id="tags-t1"><label for="tags-t1">Мастеркласс</label></div>
-										<div class="item"><input type="checkbox" name="t2" id="tags-t2"><label for="tags-t2">Семинар</label></div>
-										<div class="item"><input type="checkbox" name="t3" id="tags-t3"><label for="tags-t3">Праздник</label></div>
-										<div class="item"><input type="checkbox" name="t4" id="tags-t4"><label for="tags-t4">Вариант 4</label></div>
-										<div class="item"><input type="checkbox" name="t5" id="tags-t5"><label for="tags-t5">Вариант 5</label></div>
-										<div class="item"><input type="checkbox" name="t6" id="tags-t6"><label for="tags-t6">Вариант 6</label></div>
-										<div class="item"><input type="checkbox" name="t7" id="tags-t7"><label for="tags-t7">Вариант 7</label></div>
-										<div class="item"><input type="checkbox" name="t8" id="tags-t8"><label for="tags-t8">Вариант 8</label></div>
-									</div>
-								</li>
-								<li>духовные мероприятия<span></span></li>
-								<li>новые<span></span></li>
-								<li>образовательные мероприятия<span></span></li>
-								<li>праздники<span></span></li>
-								<li>для детей<span></span></li>
-								<li class="hidden">для взрослых<span></span></li>
-								<li class="hidden">духовные мероприятия<span></span></li>
-								<li class="hidden">образовательные мероприятия<span></span></li>
-								<li class="hidden">праздники<span></span></li>
-								<li class="hidden">новые<span></span></li>
-								<li class="hidden">для детей<span></span></li>
-								<li class="more">Еще</li>
-							</ul>
-						</div>
-						<div class="flex">
-							<div class="types">
-								<ul>
-									<li><a href="#" class="curr">Все</a></li>
-									<li><a href="#">Избранные</a></li>
-									<li><a href="#">Мои</a></li>
-								</ul>
-							</div>
-							<div class="view-types">
-								<ul>
-									<li>
-										<a href="/" class="list curr">Списком</a>
-									</li>
-									<li>
-										<a href="events-map.html" class="map">На карте</a>
-									</li>
-									<li>
-										<a href="events-calendar.html" class="calendar">Календарь</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="activities">
-						<ul>
-							<li>
-								<a href="event.html" class="photo">
-									<img src="assets/images/_photo1.jpg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite"></span>
-								</a>
-								<a href="event.html" class="title">Масленица в Парке Горького</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li>
-								<a href="event.html" class="photo">
-									<img src="assets/images/_photo2.jpg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite"></span>
-								</a>
-								<a href="event.html" class="title">Творческое решение проблем</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li>
-								<a href="event.html" class="photo">
-									<img src="assets/images/_photo3.jpg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite act"></span>
-								</a>
-								<a href="event.html" class="title">Готовим домашние манты</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li>
-								<a href="event.html" class="photo">
-									<img src="assets/images/_photo4.jpg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite"></span>
-								</a>
-								<a href="event.html" class="title">День орнитолога в Биологическом музее</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li>
-								<a href="event.html" class="photo">
-									<img src="assets/images/_photo5.jpg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite"></span>
-								</a>
-								<a href="event.html" class="title">Масленица в Парке Горького</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li>
-								<a href="event.html" class="photo">
-									<img src="assets/images/_photo6.jpg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite"></span>
-								</a>
-								<a href="event.html" class="title">Творческое решение проблем</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li class="cancelled">
-								<span class="photo">
-									<img src="assets/images/_photo7.jpg" alt="#" title="#">
-									<span class="status">Отменено</span>
-								</span>
-								<span class="title">Готовим домашние манты</span>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-							<li>
-								<a href="event.html" class="photo no-photo">
-									<img src="assets/images/no_photo.svg" alt="#" title="#">
-									<span class="price">от 1200 ₽</span>
-									<span class="favourite"></span>
-								</a>
-								<a href="event.html" class="title">Творческое решение проблем</a>
-								<span class="date">18 фераля, 10:00, онлайн</span>
-								<span class="distance">500 м</span>
-							</li>
-
-							<li class="skeleton">
-								<span class="photo"></span>
-								<span class="title"></span>
-								<span class="subtitle"></span>
-								<span class="date"></span>
-								<span class="distance"></span>
-							</li>
-							<li class="skeleton">
-								<span class="photo"></span>
-								<span class="title"></span>
-								<span class="subtitle"></span>
-								<span class="date"></span>
-								<span class="distance"></span>
-							</li>
-							<li class="skeleton">
-								<span class="photo"></span>
-								<span class="title"></span>
-								<span class="subtitle"></span>
-								<span class="date"></span>
-								<span class="distance"></span>
-							</li>
-							<li class="skeleton">
-								<span class="photo"></span>
-								<span class="title"></span>
-								<span class="subtitle"></span>
-								<span class="date"></span>
-								<span class="distance"></span>
-							</li>
+				<main class="body">
+					<nav id="mn-main" class="tabs">
+						<ul class="holder">
+							<li><a href="/" class="curr">Мероприятия</a></li>
+							<li><a href="organisations.html">Организации</a></li>
 						</ul>
+					</nav>
 
-						<div class="btn-line">
-							<button class="btn">Показать еще 19</button>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+					<section id="catalogue">
+						<div class="holder">
+							<h1>Мероприятия <sup>2230</sup></h1>
 
-		<footer>
-			<div class="holder">
-				<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
-				<div id="bottom-info">
-					<div id="copyright">&copy;2022 ООО «Вестник»</div>
-					<a href="#" id="terms-link">Пользовательское соглашение</a>
-				</div>
-				<a href="#" id="about-link">О проекте</a>
-				<a href="#modal-feedback" id="btn-feedback" class="js-modal-link"><span>Обратная связь</span></a>
-
-				<!-- modal feedback -->
-				<div class="modal-wrapper modal-feedback" id="modal-feedback">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Обратная связь</div>
-							<div class="form" id="form-feedback">
-								<form action="#" method="post" enctype="multipart/form-data">
-									<div class="select">
-										<div class="label">Выберите тему</div>
-										<div class="dd">
-											<div class="item"><input type="radio" name="feedback" id="feedback-t1"><label for="feedback-t1">Тема 1</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t2"><label for="feedback-t2">Тема 2</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t3"><label for="feedback-t3">Тема 3</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t4"><label for="feedback-t4">Тема 4</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t5"><label for="feedback-t5">Тема 5</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t6"><label for="feedback-t6">Тема 6</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t7"><label for="feedback-t7">Тема 7</label></div>
-											<div class="item"><input type="radio" name="feedback" id="feedback-t8"><label for="feedback-t8">Тема 8</label></div>
+							<div class="filter">
+								<form action="search.html" method="post">
+									<div class="search">
+										<div class="input-holder">
+											<input type="text" name="keyword" placeholder="Поиск по мероприятиям" autocomplete="off">
+											<input type="image" src="assets/images/ico_search.svg" class="ico">
+											<div class="clear"></div>
 										</div>
-									</div>
-									<div class="half">
-										<div class="input">
-											<input type="text" name="name" placeholder="Имя" maxlength="255">
-											<i>Имя</i>
-										</div>
-										<div class="input">
-											<input type="email" name="email" placeholder="E-mail" maxlength="255">
-											<i>E-mail</i>
-										</div>
-									</div>
-									<div class="input">
-										<textarea name="text" placeholder="Текст"></textarea>
-										<i>Текст</i>
-									</div>
-									<div class="upload">
-										<div class="init">
-											<a href="#" class="js-upload-file">Прикрепить файл</a>
-											<input type="file" name="photo" id="upload-file-input" multiple accept="image/*">
-										</div>
-
-										<div class="progress" id="upload-file-progress" style="display: none;">
-											<svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
-											 	<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954"></circle>
-											  	<circle class="donut-ring" cx="21" cy="21" r="15.91549430918954"></circle>
-											  	<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
-											</svg>
-											<div class="status">Загрузка <span class="percent">12</span>%</div>
-
-											<div class="cancel">Отмена</div>
-										</div>
-
-										<div class="uploaded" id="upload-file-uploaded" style="display: none;">
-											<div class="filename">Image_3927.png</div>
-
-											<div class="remove"></div>
-										</div>
-
-										<div class="error" id="upload-file-uploaded" style="display: none;">
-											<div class="message"></div>
-										</div>
-									</div>
-									<div class="flex">
-										<div class="conditions"><input type="checkbox" name="agree" id="feedback-conditions-agree" checked="checked"><label for="feedback-conditions-agree">Даю согласие на обработку <br><a href="#" target="_blank">персональных данных</a></label></div>
-										<button class="btn js-modal-link" data-target="#modal-feedback-done">Отправить</button>
+										<button class="btn"><span>Найти</span></button>							
 									</div>
 								</form>
+								<div class="tags">
+									<ul>
+										<li class="select">
+											<div class="label">Тип мероприятия</div>
+											<div class="dd">
+												<div class="item"><input type="checkbox" name="t1" id="tags-t1"><label for="tags-t1">Мастеркласс</label></div>
+												<div class="item"><input type="checkbox" name="t2" id="tags-t2"><label for="tags-t2">Семинар</label></div>
+												<div class="item"><input type="checkbox" name="t3" id="tags-t3"><label for="tags-t3">Праздник</label></div>
+												<div class="item"><input type="checkbox" name="t4" id="tags-t4"><label for="tags-t4">Вариант 4</label></div>
+												<div class="item"><input type="checkbox" name="t5" id="tags-t5"><label for="tags-t5">Вариант 5</label></div>
+												<div class="item"><input type="checkbox" name="t6" id="tags-t6"><label for="tags-t6">Вариант 6</label></div>
+												<div class="item"><input type="checkbox" name="t7" id="tags-t7"><label for="tags-t7">Вариант 7</label></div>
+												<div class="item"><input type="checkbox" name="t8" id="tags-t8"><label for="tags-t8">Вариант 8</label></div>
+											</div>
+										</li>
+										<li>духовные мероприятия<span></span></li>
+										<li>новые<span></span></li>
+										<li>образовательные мероприятия<span></span></li>
+										<li>праздники<span></span></li>
+										<li>для детей<span></span></li>
+										<li class="hidden">для взрослых<span></span></li>
+										<li class="hidden">духовные мероприятия<span></span></li>
+										<li class="hidden">образовательные мероприятия<span></span></li>
+										<li class="hidden">праздники<span></span></li>
+										<li class="hidden">новые<span></span></li>
+										<li class="hidden">для детей<span></span></li>
+										<li class="more">Еще</li>
+									</ul>
+								</div>
+								<div class="flex">
+									<div class="types">
+										<ul>
+											<li><a href="#" class="curr">Все</a></li>
+											<li><a href="#">Избранные</a></li>
+											<li><a href="#">Мои</a></li>
+										</ul>
+									</div>
+									<div class="view-types">
+										<ul>
+											<li>
+												<a href="/" class="list curr">Списком</a>
+											</li>
+											<li>
+												<a href="events-map.html" class="map">На карте</a>
+											</li>
+											<li>
+												<a href="events-calendar.html" class="calendar">Календарь</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="activities">
+								<ul>
+									<li>
+										<a href="event.html" class="photo">
+											<img src="assets/images/_photo1.jpg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite"></span>
+										</a>
+										<a href="event.html" class="title">Масленица в Парке Горького</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li>
+										<a href="event.html" class="photo">
+											<img src="assets/images/_photo2.jpg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite"></span>
+										</a>
+										<a href="event.html" class="title">Творческое решение проблем</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li>
+										<a href="event.html" class="photo">
+											<img src="assets/images/_photo3.jpg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite act"></span>
+										</a>
+										<a href="event.html" class="title">Готовим домашние манты</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li>
+										<a href="event.html" class="photo">
+											<img src="assets/images/_photo4.jpg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite"></span>
+										</a>
+										<a href="event.html" class="title">День орнитолога в Биологическом музее</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li>
+										<a href="event.html" class="photo">
+											<img src="assets/images/_photo5.jpg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite"></span>
+										</a>
+										<a href="event.html" class="title">Масленица в Парке Горького</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li>
+										<a href="event.html" class="photo">
+											<img src="assets/images/_photo6.jpg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite"></span>
+										</a>
+										<a href="event.html" class="title">Творческое решение проблем</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li class="cancelled">
+										<span class="photo">
+											<img src="assets/images/_photo7.jpg" alt="#" title="#">
+											<span class="status">Отменено</span>
+										</span>
+										<span class="title">Готовим домашние манты</span>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+									<li>
+										<a href="event.html" class="photo no-photo">
+											<img src="assets/images/no_photo.svg" alt="#" title="#">
+											<span class="price">от 1200 ₽</span>
+											<span class="favourite"></span>
+										</a>
+										<a href="event.html" class="title">Творческое решение проблем</a>
+										<span class="date">18 фераля, 10:00, онлайн</span>
+										<span class="distance">500 м</span>
+									</li>
+
+									<li class="skeleton">
+										<span class="photo"></span>
+										<span class="title"></span>
+										<span class="subtitle"></span>
+										<span class="date"></span>
+										<span class="distance"></span>
+									</li>
+									<li class="skeleton">
+										<span class="photo"></span>
+										<span class="title"></span>
+										<span class="subtitle"></span>
+										<span class="date"></span>
+										<span class="distance"></span>
+									</li>
+									<li class="skeleton">
+										<span class="photo"></span>
+										<span class="title"></span>
+										<span class="subtitle"></span>
+										<span class="date"></span>
+										<span class="distance"></span>
+									</li>
+									<li class="skeleton">
+										<span class="photo"></span>
+										<span class="title"></span>
+										<span class="subtitle"></span>
+										<span class="date"></span>
+										<span class="distance"></span>
+									</li>
+								</ul>
+
+								<div class="btn-line">
+									<button class="btn">Показать еще 19</button>
+								</div>
+							</div>
+						</div>
+					</section>
+				</main>
+
+				<footer>
+					<div class="holder">
+						<a href="/" id="logo-footer"><img src="assets/images/logo_inversed.svg" alt="#" title="#"></a>
+						<div id="bottom-info">
+							<div id="copyright">&copy;2022 ООО «Вестник»</div>
+							<a href="#" id="terms-link">Пользовательское соглашение</a>
+						</div>
+						<a href="#" id="about-link">О проекте</a>
+						<a href="#modal-feedback" id="btn-feedback" class="js-modal-link"><span>Обратная связь</span></a>
+
+						<!-- modal feedback -->
+						<div class="modal-wrapper modal-feedback" id="modal-feedback">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Обратная связь</div>
+									<div class="form" id="form-feedback">
+										<form action="#" method="post" enctype="multipart/form-data">
+											<div class="select">
+												<div class="label">Выберите тему</div>
+												<div class="dd">
+													<div class="item"><input type="radio" name="feedback" id="feedback-t1"><label for="feedback-t1">Тема 1</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t2"><label for="feedback-t2">Тема 2</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t3"><label for="feedback-t3">Тема 3</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t4"><label for="feedback-t4">Тема 4</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t5"><label for="feedback-t5">Тема 5</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t6"><label for="feedback-t6">Тема 6</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t7"><label for="feedback-t7">Тема 7</label></div>
+													<div class="item"><input type="radio" name="feedback" id="feedback-t8"><label for="feedback-t8">Тема 8</label></div>
+												</div>
+											</div>
+											<div class="half">
+												<div class="input">
+													<input type="text" name="name" placeholder="Имя" maxlength="255">
+													<i>Имя</i>
+												</div>
+												<div class="input">
+													<input type="email" name="email" placeholder="E-mail" maxlength="255">
+													<i>E-mail</i>
+												</div>
+											</div>
+											<div class="input">
+												<textarea name="text" placeholder="Текст"></textarea>
+												<i>Текст</i>
+											</div>
+											<div class="upload">
+												<div class="init">
+													<a href="#" class="js-upload-file">Прикрепить файл</a>
+													<input type="file" name="photo" id="upload-file-input" multiple accept="image/*">
+												</div>
+
+												<div class="progress" id="upload-file-progress" style="display: none;">
+													<svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+													 	<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954"></circle>
+													  	<circle class="donut-ring" cx="21" cy="21" r="15.91549430918954"></circle>
+													  	<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
+													</svg>
+													<div class="status">Загрузка <span class="percent">12</span>%</div>
+
+													<div class="cancel">Отмена</div>
+												</div>
+
+												<div class="uploaded" id="upload-file-uploaded" style="display: none;">
+													<div class="filename">Image_3927.png</div>
+
+													<div class="remove"></div>
+												</div>
+
+												<div class="error" id="upload-file-uploaded" style="display: none;">
+													<div class="message"></div>
+												</div>
+											</div>
+											<div class="flex">
+												<div class="conditions"><input type="checkbox" name="agree" id="feedback-conditions-agree" checked="checked"><label for="feedback-conditions-agree">Даю согласие на обработку <br><a href="#" target="_blank">персональных данных</a></label></div>
+												<button class="btn js-modal-link" data-target="#modal-feedback-done">Отправить</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- modal done -->
+						<div class="modal-wrapper modal-done" id="modal-feedback-done">
+							<div class="modal">
+								<div class="contents">
+									<div class="modal-close" title="Закрыть"></div>
+
+									<div class="h1">Заявка отправлена</div>
+									<div class="text">
+										<p>Мы сообщим вам по email о статусе заявки</p>
+									</div>
+									<button class="btn js-cancel">Хорошо</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</footer>
 
-				<!-- modal done -->
-				<div class="modal-wrapper modal-done" id="modal-feedback-done">
-					<div class="modal">
-						<div class="contents">
-							<div class="modal-close" title="Закрыть"></div>
-
-							<div class="h1">Заявка отправлена</div>
-							<div class="text">
-								<p>Мы сообщим вам по email о статусе заявки</p>
-							</div>
-							<button class="btn js-cancel">Хорошо</button>
-						</div>
+				<div id="burger-menu">
+					<div class="mn-main">
+						<ul>
+							<li><a href="#">О проекте</a></li>
+						</ul>
 					</div>
+					<div class="close"></div>
 				</div>
 			</div>
-		</footer>
 
-		<div id="burger-menu">
-			<div class="mn-main">
-				<ul>
-					<li><a href="#">О проекте</a></li>
-				</ul>
-			</div>
-			<div class="close"></div>
+			<div id="modal-fadeout"></div>
 		</div>
 	</div>
-
-	<div id="modal-fadeout"></div>
 
 	<script src="/assets/js/scripts.js?1"></script>
 </body>
