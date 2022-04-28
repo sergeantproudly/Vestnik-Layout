@@ -227,7 +227,7 @@ textarea {
 		& > input[type="text"],
 		& > input[type="email"],
 		& > input[type="password"] {
-			padding-right: 50px;
+			padding-right: 50px !important;
 		}
 
 		& > .tool {
@@ -318,11 +318,13 @@ textarea {
 	input[type='password'],
 	input[type='number'] {
 		width: 100%;
+		border: 1px solid #F9F9F9;
 		margin-bottom: 0;
 	}
 
 	textarea {
 		width: 100%;
+		border: 1px solid #F9F9F9;
 		margin-bottom: 0;
 	}
 
@@ -358,11 +360,26 @@ textarea {
 		}
 	}
 
+	&.error {
+		input[type='text'],
+		input[type='tel'],
+		input[type='email'],
+		input[type='password'],
+		input[type='number'] {
+			border-color: #EA525B;
+		}
+
+		textarea {
+			border-color: #EA525B;
+		}
+	}
+
 	.error {
 		display: none;
-		padding-top: 4px;
+		padding-top: 6px;
 		font-size: 11px;
 		color: #EA525B;
+		text-align: left;
 	}
 
 	&.pswd {

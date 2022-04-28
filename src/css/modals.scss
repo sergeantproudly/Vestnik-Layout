@@ -126,7 +126,7 @@
 				input[type="tel"],
 				input[type="password"] {
 					background-color: #F8F8F8;
-					padding: 18px 16px 17px;
+					padding: 17px 16px 16px;
 					margin-bottom: 0;
 					@include radius(8px);
 				}
@@ -136,14 +136,14 @@
 					input[type="email"],
 					input[type="tel"],
 					input[type="password"] {						
-						padding-top: 23px;
-						padding-bottom: 12px;
+						padding-top: 22px;
+						padding-bottom: 11px;
 					}
 				}
 
 				textarea {
 					background-color: #F8F8F8;
-					padding: 18px 16px 17px;
+					padding: 17px 16px 16px;
 					margin-bottom: 0;
 					width: 100%;
 					resize: vertical;
@@ -152,8 +152,8 @@
 
 				&.focused {
 					textarea {						
-						padding-top: 23px;
-						padding-bottom: 12px;
+						padding-top: 22px;
+						padding-bottom: 11px;
 					}
 				}
 			}
