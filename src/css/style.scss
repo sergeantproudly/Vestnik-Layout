@@ -10,6 +10,7 @@
 @import 'modals';
 @import 'slick';
 @import 'magnific-popup';
+@import 'button-animated';
 
 html {
 	min-width: 320px;
@@ -1222,6 +1223,7 @@ footer {
 						top: 105%;
 						left: 0;
 						width: 100%;
+						min-width: 180px;
 						max-height: 208px;
 						background-color: $color-white;
 						overflow-x: hidden;
@@ -3549,7 +3551,7 @@ footer {
 				}
 
 				.info {
-					margin-left: 33px;
+					margin-left: 20px;
 
 					h4,
 					.h4 {
@@ -3614,16 +3616,17 @@ footer {
 						position: relative;
 						color: $color-primary;
 						cursor: pointer;
-						padding-left: 34px;
+						font-size: 14px;
+						padding-left: 30px;
 
 						&:before {
 							content: '';
 							position: absolute;
-							top: 0;
+							top: -2px;
 							left: 0;
-							width: 24px;
-							height: 24px;
-							background: url('../images/ico_remove.svg') no-repeat;
+							width: 20px;
+							height: 20px;
+							background: url('../images/ico_remove3.svg') no-repeat;
 							background-size: contain;
 						}
 					}
@@ -3945,6 +3948,8 @@ footer {
 	}
 
 	.half {
+		position: relative;
+
 		@media (min-width: $adaptive-width-tablet-wide) {
 			display: flex;
 			justify-content: space-between;
@@ -3952,6 +3957,51 @@ footer {
 			& > .section {
 				width: 48.5%;
 				flex-basis: 48.5%;
+			}
+		}
+
+		.tool {
+			position: relative;
+			cursor: pointer;
+			color: $color-grey;
+			font-size: 16px;
+			padding: 0 0 16px 32px;
+			border-bottom: 1px solid $color-grey-lines;
+			margin-bottom: 16px;
+
+			@media (min-width: $adaptive-width-tablet-wide) {
+				position: absolute;
+				top: 50%;
+				right: -30px;
+				transform: translateY(-50%);
+				font-size: 0;
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+
+			&.remove {
+				@media (min-width: $adaptive-width-tablet-wide) {
+					width: 20px;
+					height: 20px;
+				}
+
+				&:after {
+					content: '';
+					width: 20px;
+					height: 20px;
+					background: url('../images/ico_remove2.svg') no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			& > span {
+				@media (min-width: $adaptive-width-tablet-wide) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -3991,9 +4041,40 @@ footer {
 	}
 
 	.tariff {
+		position: relative;
+
 		& + .tariff {
 			padding-top: 24px;
 			border-top: 1px solid $color-grey-lines;
+		}
+
+		.tool {
+			position: relative;
+			cursor: pointer;
+			color: $color-grey;
+			font-size: 14px;
+			padding-left: 32px;
+			margin-bottom: 16px;
+
+			@media (min-width: $adaptive-width-tablet-wide) {
+				position: absolute;
+				top: 24px;
+				right: 0;
+				margin: 0;
+			}
+
+			&.remove {
+				&:after {
+					content: '';
+					width: 20px;
+					height: 20px;
+					background: url('../images/ico_remove2.svg') no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: -2px;
+					left: 0;
+				}
+			}
 		}
 	}
 
@@ -4002,6 +4083,35 @@ footer {
 			padding-top: 24px;
 			border-top: 1px solid $color-grey-lines;
 		}
+
+		.tool {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			color: $color-black;
+			font-size: 14px;
+			padding: 13px 18px 13px 50px;
+			border: 1px solid $color-grey-lines;
+			@include radius(10px);
+			margin-bottom: 24px;
+
+			@media (min-width: $adaptive-width-tablet-wide) {
+				margin-bottom: 36px;
+			}
+
+			&.remove {
+				&:after {
+					content: '';
+					width: 20px;
+					height: 20px;
+					background: url('../images/ico_remove3.svg') no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: 13px;
+					left: 15px;
+				}
+			}
+		}
 	}
 
 	.add-tariff,
@@ -4009,6 +4119,8 @@ footer {
 		padding-bottom: 24px;
 		margin-bottom: 24px;
 		border-bottom: 1px solid $color-grey-lines;
+		padding-top: 16px;
+		border-top: 1px solid $color-grey-lines;
 
 		& > span {
 			cursor: pointer;
@@ -4039,6 +4151,12 @@ footer {
 				background-size: contain;
 			}
 		}
+	}
+
+	#tariff + .add-tariff,
+	#service + .add-service {
+		border-top: 0;
+		padding-top: 0;
 	}
 
 	.btn-line {

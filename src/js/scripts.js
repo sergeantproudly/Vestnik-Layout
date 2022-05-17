@@ -367,7 +367,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	if ($('#add-form').length) {
 		// Добавление еще даты в форме создания
 		$('#add-date-time').click(function() {
-			$('#date-time').clone().removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+			var $datetime = $('#date-time').clone();
+			$datetime.removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+			$datetime.append('<div class="tool remove"><spa>Удалить</span></div>');
+			$datetime.children('.remove').click(function() {
+				$(this).closest('.half').remove();
+			});
 		});
 
 		// Добавление тегов
@@ -417,12 +422,22 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Добавление в форме создания
 	if ($('#add-tariff').length) {
 		$('#add-tariff').click(function() {
-			$('#tariff').clone().removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+			var $tariff = $('#tariff').clone();
+			$tariff.removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+			$tariff.append('<div class="tool remove"><spa>Удалить тариф</span></div>');
+			$tariff.children('.remove').click(function() {
+				$(this).closest('.tariff').remove();
+			});
 		});
 	}
 	if ($('#add-service').length) {
 		$('#add-service').click(function() {
-			$('#service').clone().removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+			var $service = $('#service').clone();
+			$service.removeAttr('id').insertBefore($(this)).find('input.date').datepicker();
+			$service.append('<div class="tool remove"><spa>Удалить товар</span></div>');
+			$service.children('.remove').click(function() {
+				$(this).closest('.service').remove();
+			});
 		});
 	}
 
