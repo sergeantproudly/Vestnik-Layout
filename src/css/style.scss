@@ -2496,8 +2496,11 @@ footer {
 						}
 					}
 
-					&.location {
+					.location {
+						display: inline-block;
+
 						&:before {
+							content: '';
 							display: inline-block;
 							background: url('../images/ico_place2.svg') no-repeat;
 							background-size: contain;
@@ -4887,8 +4890,11 @@ footer {
 						}
 					}
 
-					&.location {
+					.location {
+						display: inline-block;
+
 						&:before {
+							content: '';
 							display: inline-block;
 							background: url('../images/ico_place3.svg') no-repeat;
 							background-size: contain;
