@@ -2354,6 +2354,7 @@ footer {
 		@media (min-width: $adaptive-width-desktop-wide) {
 			display: inline-block;
 			margin-left: 50px;
+			flex-grow: 1;
 		}
 
 		h2,
@@ -4818,6 +4819,7 @@ footer {
 		@media (min-width: $adaptive-width-desktop-wide) {
 			display: inline-block;
 			margin-left: 50px;
+			flex-grow: 1;
 		}
 
 		h2,
