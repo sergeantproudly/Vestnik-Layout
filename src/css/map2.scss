@@ -1,0 +1,1420 @@
+#map {
+	.info {
+		&.map-marker-num {
+			text-align: left;
+			font-weight: 400;
+			display: none;
+			position: absolute;
+			bottom: vwm(65);
+			left: 50%;
+			font-family: $font-first;
+			font-size: 0;
+			background: $color-white;
+			width: vwm(240);
+			transform: translateX(-50%);
+			padding: vwm(42) vwm(16) vwm(26);
+			box-shadow: 0px vwm(16) vwm(34) rgba(0, 0, 0, 0.15);
+			@include radius(vwm(8));
+			@extend %highlight-cancel;
+
+			@media (min-width: $adaptive-width-tablet) {
+				bottom: vwt(65);
+				width: vwt(500);
+				padding: vwt(16);
+				box-shadow: 0px vwt(16) vwt(34) rgba(0, 0, 0, 0.15);
+				@include radius(vwt(8));
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				bottom: vw(65);
+				width: vw(500);
+				padding: vw(16);
+				box-shadow: 0px vw(16) vw(34) rgba(0, 0, 0, 0.15);
+				@include radius(vw(8));
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				bottom: vwm(-21);
+				border-color: transparent;
+				border-style: solid;
+				border-width: vwm(11) vwm(11);
+				border-top-color: $color-white;
+				transform: translateX(-50%);
+
+				@media (min-width: $adaptive-width-tablet) {
+					bottom: vwt(-21);
+					border-width: vwt(11) vwt(11);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					bottom: vw(-21);
+					border-width: vw(11) vw(11);
+				}
+			}
+
+			.close {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: vwm(12);
+				height: vwm(12);
+				padding: vwm(18);
+				font-size: 0;
+				background: url('../images/ico_close_info_map.svg') no-repeat center;
+				background-size: vwm(12) vwm(12);
+				cursor: pointer;
+
+				@media (min-width: $adaptive-width-tablet) {
+					width: vwt(12);
+					height: vwt(12);
+					padding: vwt(18);
+					background-size: vwt(12) vwt(12);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					width: vw(12);
+					height: vw(12);
+					padding: vw(18);
+					background-size: vw(12) vw(12);
+				}
+			}
+
+			.event {
+				@media (min-width: $adaptive-width-tablet) {
+					position: relative;
+					padding-left: vwt(189);
+					min-height: vwt(114);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding-left: vwd(189);
+					min-height: vwd(114);	
+				}
+
+				.photo {
+					position: relative;
+					display: block;
+					height: vwm(114);
+					margin-bottom: vwm(10);
+
+					@media (min-width: $adaptive-width-tablet) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: vwt(173);
+						height: vwt(114);
+						margin-bottom: 0;
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: vwd(173);
+						height: vwd(114);
+					}
+
+					img {
+						@include fit();
+						overflow: hidden;
+						@include radius(vwm(8));
+					}
+
+					.price {
+						background-color: rgba(0, 0, 0, 0.5);
+						position: absolute;
+						bottom: vwm(10);
+						left: vwm(10);
+						padding: vwm(11) vwm(16);
+						@include fs(14);
+						font-weight: 600;
+						color: $color-white;
+						@include radius(vwm(56));
+
+						@media (min-width: $adaptive-width-tablet) {
+							bottom: vwt(10);
+							left: vwt(10);
+							padding: vwt(11) vwt(16);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							bottom: vwd(10);
+							left: vwd(10);
+							padding: vwd(11) vwd(16);
+						}
+					}
+				}
+
+				.title {
+					display: block;
+					text-decoration: none;
+					@include fs(14);
+					font-weight: 600;
+					line-height: 1.43;
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(18);
+						line-height: 1.22;
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.date {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+						margin-bottom: vwd(9);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_cal.svg') no-repeat;
+						background-size: contain;
+						width: vwm(16);
+						height: vwm(16);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(2);
+							width: vwt(16);
+							height: vwt(16);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(2);
+							width: vwd(16);
+							height: vwd(16);
+						}
+					}
+				}
+
+				.distance {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_place2.svg') no-repeat;
+						background-size: contain;
+						width: vwm(12);
+						height: vwm(12);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(4);
+							width: vwt(12);
+							height: vwt(12);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(4);
+							width: vwd(12);
+							height: vwd(12);
+						}
+					}
+				}
+			}
+
+			.events-list {
+				max-height: vwm(255);
+				overflow-y: auto;
+				margin-bottom: vwm(8);
+
+				@media (min-width: $adaptive-width-tablet) {
+					max-height: vwt(255);
+					margin-bottom: vwt(8);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					max-height: vwd(255);
+					margin-bottom: vwd(8);
+				}
+
+				.item {
+					margin-top: vwm(16);
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					& > a,
+					& > .a {
+						display: block;
+						text-decoration: none;
+						@include fs(14);
+						font-weight: 600;
+						line-height: 1.43;
+						margin-bottom: vwm(9);
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(16);
+							margin-bottom: vwt(9);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							margin-bottom: vwd(9);
+						}
+					}
+
+					.date {
+						display: block;
+						position: relative;
+						@include fs(12);
+						color: $color-grey;
+						padding-left: vwm(22);
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(14);
+							padding-left: vwt(22);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							padding-left: vwd(22);
+						}
+
+						&:before {
+							content: '';
+							position: absolute;
+							top: vwm(-2);
+							left: 0;
+							display: block;
+							background: url('../images/ico_cal.svg') no-repeat;
+							background-size: contain;
+							width: vwm(16);
+							height: vwm(16);
+
+							@media (min-width: $adaptive-width-tablet) {
+								top: vwt(-2);
+								width: vwt(16);
+								height: vwt(16);
+							}
+
+							@media (min-width: $adaptive-width-desktop) {
+								top: vwd(-2);
+								width: vwd(16);
+								height: vwd(16);
+							}
+						}
+					}
+				}
+			}
+
+			.more {
+				display: block;
+				text-decoration: none;
+				@include fs(12);
+				cursor: pointer;
+				color: $color-primary;
+				padding: vwm(8) 0;
+				margin-bottom: vwm(-8);
+
+				@media (min-width: $adaptive-width-tablet) {
+					@include fs(14);
+					padding: vwt(8) 0;
+					margin-bottom: vwt(-8);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding: vwd(8) 0;
+					margin-bottom: vwd(-8);
+				}
+			}
+
+			.organisation {
+				@media (min-width: $adaptive-width-tablet) {
+					position: relative;
+					padding-left: vwt(189);
+					min-height: vwt(114);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding-left: vwd(189);
+					min-height: vwd(114);	
+				}
+
+				.photo {
+					position: relative;
+					display: block;
+					height: vwm(114);
+					margin-bottom: vwm(10);
+
+					@media (min-width: $adaptive-width-tablet) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: vwt(173);
+						height: vwt(114);
+						margin-bottom: 0;
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: vwd(173);
+						height: vwd(114);
+					}
+
+					img {
+						@include fit();
+						overflow: hidden;
+						@include radius(vwm(8));
+					}
+				}
+
+				.title {
+					display: block;
+					text-decoration: none;
+					@include fs(14);
+					font-weight: 600;
+					line-height: 1.43;
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(18);
+						line-height: 1.22;
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.type {
+					display: block;
+					position: relative;
+					@include fs(12);
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(14);
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.distance {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_place2.svg') no-repeat;
+						background-size: contain;
+						width: vwm(12);
+						height: vwm(12);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(4);
+							width: vwt(12);
+							height: vwt(12);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(4);
+							width: vwd(12);
+							height: vwd(12);
+						}
+					}
+				}
+			}
+
+			.organisations-list {
+				max-height: vwm(255);
+				overflow-y: auto;
+				margin-bottom: vwm(8);
+
+				@media (min-width: $adaptive-width-tablet) {
+					max-height: vwt(255);
+					margin-bottom: vwt(8);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					max-height: vwd(255);
+					margin-bottom: vwd(8);
+				}
+
+				.item {
+					margin-top: vwm(16);
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					& > a,
+					& > .a {
+						display: block;
+						text-decoration: none;
+						@include fs(14);
+						font-weight: 600;
+						line-height: 1.43;
+						margin-bottom: vwm(9);
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(16);
+							margin-bottom: vwt(9);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							margin-bottom: vwd(9);
+						}
+					}
+
+					.type {
+						display: block;
+						position: relative;
+						@include fs(12);
+						color: $color-grey;
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(14);
+						}
+					}
+				}
+			}
+		}
+
+		&.map-marker-dotts {
+			display: none;
+			position: absolute;
+			bottom: vwm(65);
+			left: 50%;
+			font-family: $font-first;
+			font-size: 0;
+			background: $color-white;
+			width: vwm(240);
+			transform: translateX(-50%);
+			padding: vwm(42) vwm(16) vwm(26);
+			box-shadow: 0px vwm(16) vwm(34) rgba(0, 0, 0, 0.15);
+			@include radius(vwm(8));
+			@extend %highlight-cancel;
+
+			@media (min-width: $adaptive-width-tablet) {
+				bottom: vwt(65);
+				width: vwt(500);
+				padding: vwt(16);
+				box-shadow: 0px vwt(16) vwt(34) rgba(0, 0, 0, 0.15);
+				@include radius(vwt(8));
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				bottom: vw(65);
+				width: vw(500);
+				padding: vw(16);
+				box-shadow: 0px vw(16) vw(34) rgba(0, 0, 0, 0.15);
+				@include radius(vw(8));
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				bottom: vwm(-21);
+				border-color: transparent;
+				border-style: solid;
+				border-width: vwm(11) vwm(11);
+				border-top-color: $color-white;
+				transform: translateX(-50%);
+
+				@media (min-width: $adaptive-width-tablet) {
+					bottom: vwt(-21);
+					border-width: vwt(11) vwt(11);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					bottom: vw(-21);
+					border-width: vw(11) vw(11);
+				}
+			}
+
+			.close {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: vwm(12);
+				height: vwm(12);
+				padding: vwm(18);
+				font-size: 0;
+				background: url('../images/ico_close_info_map.svg') no-repeat center;
+				background-size: vwm(12) vwm(12);
+				cursor: pointer;
+
+				@media (min-width: $adaptive-width-tablet) {
+					width: vwt(12);
+					height: vwt(12);
+					padding: vwt(18);
+					background-size: vwt(12) vwt(12);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					width: vw(12);
+					height: vw(12);
+					padding: vw(18);
+					background-size: vw(12) vw(12);
+				}
+			}
+
+			.event {
+				@media (min-width: $adaptive-width-tablet) {
+					position: relative;
+					padding-left: vwt(189);
+					min-height: vwt(114);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding-left: vwd(189);
+					min-height: vwd(114);	
+				}
+
+				.photo {
+					position: relative;
+					display: block;
+					height: vwm(114);
+					margin-bottom: vwm(10);
+
+					@media (min-width: $adaptive-width-tablet) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: vwt(173);
+						height: vwt(114);
+						margin-bottom: 0;
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: vwd(173);
+						height: vwd(114);
+					}
+
+					img {
+						@include fit();
+						overflow: hidden;
+						@include radius(vwm(8));
+					}
+
+					.price {
+						background-color: rgba(0, 0, 0, 0.5);
+						position: absolute;
+						bottom: vwm(10);
+						left: vwm(10);
+						padding: vwm(11) vwm(16);
+						@include fs(14);
+						font-weight: 600;
+						color: $color-white;
+						@include radius(vwm(56));
+
+						@media (min-width: $adaptive-width-tablet) {
+							bottom: vwt(10);
+							left: vwt(10);
+							padding: vwt(11) vwt(16);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							bottom: vwd(10);
+							left: vwd(10);
+							padding: vwd(11) vwd(16);
+						}
+					}
+				}
+
+				.title {
+					display: block;
+					text-decoration: none;
+					@include fs(14);
+					font-weight: 600;
+					line-height: 1.43;
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(18);
+						line-height: 1.22;
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.date {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+						margin-bottom: vwd(9);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_cal.svg') no-repeat;
+						background-size: contain;
+						width: vwm(16);
+						height: vwm(16);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(2);
+							width: vwt(16);
+							height: vwt(16);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(2);
+							width: vwd(16);
+							height: vwd(16);
+						}
+					}
+				}
+
+				.distance {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_place2.svg') no-repeat;
+						background-size: contain;
+						width: vwm(12);
+						height: vwm(12);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(4);
+							width: vwt(12);
+							height: vwt(12);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(4);
+							width: vwd(12);
+							height: vwd(12);
+						}
+					}
+				}
+			}
+
+			.events-list {
+				max-height: vwm(255);
+				overflow-y: auto;
+				margin-bottom: vwm(8);
+
+				@media (min-width: $adaptive-width-tablet) {
+					max-height: vwt(255);
+					margin-bottom: vwt(8);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					max-height: vwd(255);
+					margin-bottom: vwd(8);
+				}
+
+				.item {
+					margin-top: vwm(16);
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					& > a,
+					& > .a {
+						display: block;
+						text-decoration: none;
+						@include fs(14);
+						font-weight: 600;
+						line-height: 1.43;
+						margin-bottom: vwm(9);
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(16);
+							margin-bottom: vwt(9);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							margin-bottom: vwd(9);
+						}
+					}
+
+					.date {
+						display: block;
+						position: relative;
+						@include fs(12);
+						color: $color-grey;
+						padding-left: vwm(22);
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(14);
+							padding-left: vwt(22);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							padding-left: vwd(22);
+						}
+
+						&:before {
+							content: '';
+							position: absolute;
+							top: vwm(-2);
+							left: 0;
+							display: block;
+							background: url('../images/ico_cal.svg') no-repeat;
+							background-size: contain;
+							width: vwm(16);
+							height: vwm(16);
+
+							@media (min-width: $adaptive-width-tablet) {
+								top: vwt(-2);
+								width: vwt(16);
+								height: vwt(16);
+							}
+
+							@media (min-width: $adaptive-width-desktop) {
+								top: vwd(-2);
+								width: vwd(16);
+								height: vwd(16);
+							}
+						}
+					}
+				}
+			}
+
+			.more {
+				display: block;
+				text-decoration: none;
+				@include fs(12);
+				cursor: pointer;
+				color: $color-primary;
+				padding: vwm(8) 0;
+				margin-bottom: vwm(-8);
+
+				@media (min-width: $adaptive-width-tablet) {
+					@include fs(14);
+					padding: vwt(8) 0;
+					margin-bottom: vwt(-8);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding: vwd(8) 0;
+					margin-bottom: vwd(-8);
+				}
+			}
+
+			.organisation {
+				@media (min-width: $adaptive-width-tablet) {
+					position: relative;
+					padding-left: vwt(189);
+					min-height: vwt(114);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding-left: vwd(189);
+					min-height: vwd(114);	
+				}
+
+				.photo {
+					position: relative;
+					display: block;
+					height: vwm(114);
+					margin-bottom: vwm(10);
+
+					@media (min-width: $adaptive-width-tablet) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: vwt(173);
+						height: vwt(114);
+						margin-bottom: 0;
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: vwd(173);
+						height: vwd(114);
+					}
+
+					img {
+						@include fit();
+						overflow: hidden;
+						@include radius(vwm(8));
+					}
+				}
+
+				.title {
+					display: block;
+					text-decoration: none;
+					@include fs(14);
+					font-weight: 600;
+					line-height: 1.43;
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(18);
+						line-height: 1.22;
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.type {
+					display: block;
+					position: relative;
+					@include fs(12);
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(14);
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.distance {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_place2.svg') no-repeat;
+						background-size: contain;
+						width: vwm(12);
+						height: vwm(12);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(4);
+							width: vwt(12);
+							height: vwt(12);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(4);
+							width: vwd(12);
+							height: vwd(12);
+						}
+					}
+				}
+			}
+
+			.organisations-list {
+				max-height: vwm(255);
+				overflow-y: auto;
+				margin-bottom: vwm(8);
+
+				@media (min-width: $adaptive-width-tablet) {
+					max-height: vwt(255);
+					margin-bottom: vwt(8);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					max-height: vwd(255);
+					margin-bottom: vwd(8);
+				}
+
+				.item {
+					margin-top: vwm(16);
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					& > a,
+					& > .a {
+						display: block;
+						text-decoration: none;
+						@include fs(14);
+						font-weight: 600;
+						line-height: 1.43;
+						margin-bottom: vwm(9);
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(16);
+							margin-bottom: vwt(9);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							margin-bottom: vwd(9);
+						}
+					}
+
+					.type {
+						display: block;
+						position: relative;
+						@include fs(12);
+						color: $color-grey;
+
+						@media (min-width: $adaptive-width-tablet) {
+							@include fs(14);
+						}
+					}
+				}
+			}
+		}
+
+		&.map-marker {
+			display: none;
+			position: absolute;
+			bottom: vwm(65);
+			left: 50%;
+			font-family: $font-first;
+			font-size: 0;
+			background: $color-white;
+			width: vwm(240);
+			transform: translateX(-50%);
+			padding: vwm(42) vwm(16) vwm(26);
+			box-shadow: 0px vwm(16) vwm(34) rgba(0, 0, 0, 0.15);
+			@include radius(vwm(8));
+			@extend %highlight-cancel;
+
+			@media (min-width: $adaptive-width-tablet) {
+				bottom: vwt(65);
+				width: vwt(500);
+				padding: vwt(16);
+				box-shadow: 0px vwt(16) vwt(34) rgba(0, 0, 0, 0.15);
+				@include radius(vwt(8));
+			}
+
+			@media (min-width: $adaptive-width-desktop) {
+				bottom: vw(65);
+				width: vw(500);
+				padding: vw(16);
+				box-shadow: 0px vw(16) vw(34) rgba(0, 0, 0, 0.15);
+				@include radius(vw(8));
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				bottom: vwm(-21);
+				border-color: transparent;
+				border-style: solid;
+				border-width: vwm(11) vwm(11);
+				border-top-color: $color-white;
+				transform: translateX(-50%);
+
+				@media (min-width: $adaptive-width-tablet) {
+					bottom: vwt(-21);
+					border-width: vwt(11) vwt(11);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					bottom: vw(-21);
+					border-width: vw(11) vw(11);
+				}
+			}
+
+			.close {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: vwm(12);
+				height: vwm(12);
+				padding: vwm(18);
+				font-size: 0;
+				background: url('../images/ico_close_info_map.svg') no-repeat center;
+				background-size: vwm(12) vwm(12);
+				cursor: pointer;
+
+				@media (min-width: $adaptive-width-tablet) {
+					width: vwt(12);
+					height: vwt(12);
+					padding: vwt(18);
+					background-size: vwt(12) vwt(12);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					width: vw(12);
+					height: vw(12);
+					padding: vw(18);
+					background-size: vw(12) vw(12);
+				}
+			}
+
+			.event {
+				@media (min-width: $adaptive-width-tablet) {
+					position: relative;
+					padding-left: vwt(189);
+					min-height: vwt(114);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding-left: vwd(189);
+					min-height: vwd(114);	
+				}
+
+				.photo {
+					position: relative;
+					display: block;
+					height: vwm(114);
+					margin-bottom: vwm(10);
+
+					@media (min-width: $adaptive-width-tablet) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: vwt(173);
+						height: vwt(114);
+						margin-bottom: 0;
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: vwd(173);
+						height: vwd(114);
+					}
+
+					img {
+						@include fit();
+						overflow: hidden;
+						@include radius(vwm(8));
+					}
+
+					.price {
+						background-color: rgba(0, 0, 0, 0.5);
+						position: absolute;
+						bottom: vwm(10);
+						left: vwm(10);
+						padding: vwm(11) vwm(16);
+						@include fs(14);
+						font-weight: 600;
+						color: $color-white;
+						@include radius(vwm(56));
+
+						@media (min-width: $adaptive-width-tablet) {
+							bottom: vwt(10);
+							left: vwt(10);
+							padding: vwt(11) vwt(16);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							bottom: vwd(10);
+							left: vwd(10);
+							padding: vwd(11) vwd(16);
+						}
+					}
+				}
+
+				.title {
+					display: block;
+					text-decoration: none;
+					@include fs(14);
+					font-weight: 600;
+					line-height: 1.43;
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(18);
+						line-height: 1.22;
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.date {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+						margin-bottom: vwd(9);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_cal.svg') no-repeat;
+						background-size: contain;
+						width: vwm(16);
+						height: vwm(16);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(2);
+							width: vwt(16);
+							height: vwt(16);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(2);
+							width: vwd(16);
+							height: vwd(16);
+						}
+					}
+				}
+
+				.distance {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_place2.svg') no-repeat;
+						background-size: contain;
+						width: vwm(12);
+						height: vwm(12);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(4);
+							width: vwt(12);
+							height: vwt(12);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(4);
+							width: vwd(12);
+							height: vwd(12);
+						}
+					}
+				}
+			}
+
+			.organisation {
+				@media (min-width: $adaptive-width-tablet) {
+					position: relative;
+					padding-left: vwt(189);
+					min-height: vwt(114);
+				}
+
+				@media (min-width: $adaptive-width-desktop) {
+					padding-left: vwd(189);
+					min-height: vwd(114);	
+				}
+
+				.photo {
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 15px;
+					height: vwm(114);
+					margin-bottom: vwm(10);
+					border: 1px solid $color-grey-lines;
+					@include radius(8px);
+
+					@media (min-width: $adaptive-width-tablet) {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: vwt(173);
+						height: vwt(114);
+						margin-bottom: 0;
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						width: vwd(173);
+						height: vwd(114);
+					}
+
+					img {
+						@include contain();
+					}
+				}
+
+				.title {
+					display: block;
+					text-decoration: none;
+					@include fs(14);
+					font-weight: 600;
+					line-height: 1.43;
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(18);
+						line-height: 1.22;
+						margin-bottom: vwt(9);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						margin-bottom: vwd(9);
+					}
+				}
+
+				.type {
+					display: block;
+					position: relative;
+					@include fs(12);
+					margin-bottom: vwm(9);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(14);
+						margin-bottom: vwt(9);
+					}
+				}
+
+				.distance {
+					display: block;
+					position: relative;
+					@include fs(12);
+					color: $color-grey;
+					padding-left: vwm(22);
+
+					@media (min-width: $adaptive-width-tablet) {
+						@include fs(16);
+						padding-left: vwt(22);
+					}
+
+					@media (min-width: $adaptive-width-desktop) {
+						padding-left: vwd(22);
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: block;
+						background: url('../images/ico_place2.svg') no-repeat;
+						background-size: contain;
+						width: vwm(12);
+						height: vwm(12);
+
+						@media (min-width: $adaptive-width-tablet) {
+							top: vwt(4);
+							width: vwt(12);
+							height: vwt(12);
+						}
+
+						@media (min-width: $adaptive-width-desktop) {
+							top: vwd(4);
+							width: vwd(12);
+							height: vwd(12);
+						}
+					}
+				}
+			}
+		}
+	}
+}

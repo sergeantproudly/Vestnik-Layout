@@ -428,6 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			$tariff.children('.remove').click(function() {
 				$(this).closest('.tariff').remove();
 			});
+			$tariff.show();
 		});
 	}
 	if ($('#add-service').length) {

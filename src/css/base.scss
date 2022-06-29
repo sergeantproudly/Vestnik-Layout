@@ -12,6 +12,8 @@ html.html-modal-long {
 html.faded {
 	body {
 		#layout {
+			position: relative;
+			
 			&:after {
 				content: '';
 				display: block;

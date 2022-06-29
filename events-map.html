@@ -192,9 +192,9 @@
 						div = this.div = document.createElement('div');
 					}
 
-					if (typeof(self.args.class_name) !== 'undefined') {
-						div.className = self.args.class_name;
-					}					
+					// if (typeof(self.args.class_name) !== 'undefined') {
+					// 	div.className = self.args.class_name;
+					// }					
 					if (typeof(self.args.id) !== 'undefined') {
 						div.id = self.args.id;
 					}
@@ -205,7 +205,7 @@
 						div.innerHTML = self.args.html;
 					}
 					if (typeof(self.args.info_html) !== 'undefined') {
-						div.innerHTML += '<div class="info">' + self.args.info_html + '<div class="close">x</div></div>';
+						div.innerHTML += '<div class="info' + (self.args.class_name ? ' ' + self.args.class_name : '') + '">' + self.args.info_html + '<div class="close">x</div></div>';
 						div.classList.add('has-info');
 						div.addEventListener('click', function(e) {
 							e.preventDefault();

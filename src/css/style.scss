@@ -5,7 +5,7 @@
 @import 'base';
 @import 'datepicker';
 @import 'scaling-off';
-@import 'map';
+@import 'map2';
 @import 'calendar';
 @import 'modals';
 @import 'slick';
@@ -4126,6 +4126,11 @@ footer {
 		border-bottom: 1px solid $color-grey-lines;
 		padding-top: 16px;
 		border-top: 1px solid $color-grey-lines;
+
+		&:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
 
 		& > span {
 			cursor: pointer;
