@@ -2211,7 +2211,8 @@ footer {
 
 	&.empty {
 		h1,
-		.h1 {
+		.h1,
+		.heading {
 			&:before {
 				content: '';
 				display: block;
