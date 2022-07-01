@@ -1223,7 +1223,7 @@ footer {
 						top: 105%;
 						left: 0;
 						z-index: 111;
-						width: 100%;
+						/*width: 100%;*/
 						min-width: 180px;
 						max-height: 208px;
 						background-color: $color-white;
@@ -1233,6 +1233,7 @@ footer {
 						margin-top: 15px;
 						box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.07);
 						@include radius(8px);
+						white-space: nowrap;						
 
 						.item {
 							position: relative;
@@ -3086,7 +3087,7 @@ footer {
 		opacity: 0;
 		top: 105%;
 		left: 0;
-		width: 100%;
+		/*width: 100%;*/
 		max-height: 208px;
 		background-color: $color-white;
 		overflow-x: hidden;
@@ -3095,6 +3096,7 @@ footer {
 		margin-top: 15px;
 		box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.07);
 		@include radius(8px);
+		white-space: nowrap;
 
 		.item {
 			position: relative;
