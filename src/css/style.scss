@@ -4050,9 +4050,13 @@ footer {
 
 	.tariff {
 		position: relative;
+		padding-top: 24px;
 
-		& + .tariff {
-			padding-top: 24px;
+		&:first-child {
+			margin-top: -24px;
+		}
+
+		& + .tariff {			
 			border-top: 1px solid $color-grey-lines;
 		}
 
