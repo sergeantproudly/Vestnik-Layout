@@ -2649,6 +2649,37 @@ footer {
 							height: 48px;
 						}
 					}
+
+					&:after {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 36px;
+						height: 36px;
+						background: url('../images/ico_calendar2_filled.svg') no-repeat;
+						background-size: contain;
+						opacity: 0;
+						@include transition(opacity);
+
+						@media (min-width: $adaptive-width-desktop) {
+							width: 48px;
+							height: 48px;
+						}
+					}
+
+					&.act,
+					&:hover {
+						&:before {
+							opacity: 0;
+							@include transition(opacity);
+						}
+
+						&:after {
+							opacity: 1;
+							@include transition(opacity);
+						}
+					}
 				}
 			}
 		}
