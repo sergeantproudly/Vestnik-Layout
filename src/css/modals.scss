@@ -1095,7 +1095,8 @@
 					width: 100%;
 					font-size: 14px;
 					padding: 19px 25px 17px 51px !important;
-					background-color: #F8F8F8;
+					background: #F8F8F8 url('../images/ico_search.svg') no-repeat 20px center;
+					background-size: 24px 24px;
 					@include radius-important(54px);
 
 					@media (min-width: $adaptive-width-desktop) {
@@ -1104,13 +1105,13 @@
 					}
 				}
 
+				/*
 				.ico {
 					position: absolute;
 					top: 14px;
 					left: 20px;
 					width: 24px;
-					height: 24px;
-					background: url('../images/ico_search.svg') no-repeat;
+					height: 24px;					
 					background-size: contain;
 
 					@media (min-width: $adaptive-width-desktop) {
@@ -1118,6 +1119,7 @@
 						left: 20px;
 					}
 				}
+				*/
 
 				.dd {
 					display: block;
