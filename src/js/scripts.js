@@ -33,6 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
 			callbacks: {
 		        beforeOpen: function() {
 		             $(this.contentContainer).removeClass('fadeOut').addClass('animated fadeIn');
+		             $('body').swipe({
+						swipeRight: function(event, direction, distance) {
+							$('.mfp-arrow-left').magnificPopup('prev');
+						},
+						swipeLeft: function(event, direction, distance) {
+							$('.mfp-arrow-right').magnificPopup('next');
+						},
+						threshold: 50
+					});
 		        },
 		        beforeClose: function() {
 		        	$(this.contentContainer).removeClass('fadeIn').addClass('fadeOut');
