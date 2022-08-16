@@ -1213,6 +1213,7 @@ footer {
 						white-space: nowrap;
 						text-overflow: ellipsis;
 						overflow: hidden;
+						max-width: 225px;
 					}
 
 					.dd {
@@ -3929,6 +3930,31 @@ footer {
 
 				@media (min-width: $adaptive-width-tablet-wide) {
 					font-size: 24px;
+				}
+			}
+
+			.note {
+				position: relative;
+				padding-left: 24px;
+				font-size: 14px;
+				line-height: 1.43;
+				margin-bottom: 24px;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 16px;
+					height: 16px;
+					background: url('../images/ico_warning.svg') no-repeat;
+					background-size: contain;
+				}
+
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
 			}
 
