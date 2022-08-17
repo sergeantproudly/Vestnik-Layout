@@ -2373,13 +2373,13 @@ footer {
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
-			@include radius(27px);
 			overflow: hidden;
 			padding: 16px 0 25px;
 			color: $color-white;
 			margin: 0 (-$padding-edges-mobile) 40px;
 
 			@media (min-width: $adaptive-width-tablet) {
+				@include radius(27px);
 				margin: 0 0 40px;
 			}
 
