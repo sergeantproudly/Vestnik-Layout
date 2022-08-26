@@ -566,4 +566,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
+	// баннер
+	if ($('.banner-top').length) {
+		$('.banner-top .close').click(function() {
+			$(this).closest('.banner-top').stop().slideUp(__animationSpeed);
+		});
+	}
+
 });
