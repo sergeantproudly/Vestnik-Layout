@@ -2533,6 +2533,12 @@ footer {
 					}
 				}
 
+				& > span {
+					@media (min-width: $adaptive-width-tablet) {
+						margin-right: 16px;
+					}
+				}
+
 				.all {
 					position: relative;
 					display: inline-block;
@@ -2546,10 +2552,6 @@ footer {
 					text-decoration: none;
 					margin: 8px 0;
 					@include transition();
-
-					@media (min-width: $adaptive-width-tablet) {
-						margin-left: 16px;
-					}
 
 					&:hover {
 						border: 1px solid rgba(255, 255, 255, 1);
