@@ -3612,7 +3612,7 @@ footer {
 		.tool-remove {
 			position: absolute;
 			top: 50%;
-			right: -44px;
+			right: 15px;
 			transform: translateY(-50%);
 			display: block;
 			width: 20px;
@@ -3620,6 +3620,10 @@ footer {
 			background: url('../images/ico_remove.svg') no-repeat;
 			background-size: contain;
 			cursor: pointer;
+
+			@media (min-width: 430px) {
+				right: -44px;
+			}
 		}
 
 		&.format {
@@ -4137,6 +4141,33 @@ footer {
 
 			input.date {
 				max-width: 343px;
+			}
+		}
+	}
+
+	.datetime {
+		.note {
+			position: relative;
+			padding-left: 24px;
+			font-size: 14px;
+			line-height: 1.43;
+			margin-bottom: 24px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 16px;
+				height: 16px;
+				background: url('../images/ico_warning.svg') no-repeat;
+				background-size: contain;
+			}
+
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
